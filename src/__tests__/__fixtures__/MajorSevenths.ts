@@ -1,1 +1,1 @@
-import { DiatonicNoteEnum, AlterationEnum } from "@/modules/constants";
+import { DiatonicNoteEnum, AlterationEnum } from "@/constants";
