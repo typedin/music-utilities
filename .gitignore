@@ -1,0 +1,33 @@
+# Node modules
+node_modules/
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Build artifacts
+dist/
+*.tsbuildinfo
+
+# Temporary files
+.temp/
+.tmp/
+.vscode/
+.idea/
+.DS_Store
+
+# Coverage reports
+coverage/
+*.lcov
+
+
+# Vitest cache
+.vitest/
+
+# Logs
+logs/
+*.log
+
