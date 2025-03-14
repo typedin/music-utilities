@@ -3,6 +3,7 @@ import { getNoteOctave } from "./getNoteOctave";
 import type { Semitones } from "./Semitones";
 import type { AlterationEnum } from "../constants";
 import { getNextAlteration, getPreviousAlteration } from "../helpers";
+import { Note } from "@/types";
 
 function getAlterationForDiminishedFifth(
   note: Note,
