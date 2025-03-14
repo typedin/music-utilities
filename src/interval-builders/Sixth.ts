@@ -35,12 +35,12 @@ function DiminishedSixth(note: Note, direction: "up" | "down" = "up"): Note {
     alteration: getAlterationForDiminishedInterval(
       note,
       direction,
-      specialCases
+      specialCases,
     ),
     octave: getNoteOctave(
       note,
       notesThatMakeOctaveChange[direction],
-      direction
+      direction,
     ),
   };
 }
@@ -52,7 +52,7 @@ function MinorSixth(note: Note, direction: "up" | "down" = "up"): Note {
     octave: getNoteOctave(
       note,
       notesThatMakeOctaveChange[direction],
-      direction
+      direction,
     ),
   };
 }
@@ -64,7 +64,7 @@ function MajorSixth(note: Note, direction: "up" | "down" = "up"): Note {
     octave: getNoteOctave(
       note,
       notesThatMakeOctaveChange[direction],
-      direction
+      direction,
     ),
   };
 }
@@ -75,12 +75,12 @@ function AugmentedSixth(note: Note, direction: "up" | "down" = "up"): Note {
     alteration: getAlterationForAugmentedInterval(
       note,
       direction,
-      specialCases
+      specialCases,
     ),
     octave: getNoteOctave(
       note,
       notesThatMakeOctaveChange[direction],
-      direction
+      direction,
     ),
   };
 }

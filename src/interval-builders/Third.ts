@@ -35,12 +35,12 @@ function DiminishedThird(note: Note, direction: "up" | "down" = "up"): Note {
     alteration: getAlterationForDiminishedInterval(
       note,
       direction,
-      specialcases
+      specialcases,
     ),
     octave: getNoteOctave(
       note,
       notesThatMakeOctaveChange[direction],
-      direction
+      direction,
     ),
   };
 }
@@ -52,7 +52,7 @@ function MinorThird(note: Note, direction: "up" | "down" = "up"): Note {
     octave: getNoteOctave(
       note,
       notesThatMakeOctaveChange[direction],
-      direction
+      direction,
     ),
   };
 }
@@ -64,7 +64,7 @@ function MajorThird(note: Note, direction: "up" | "down" = "up"): Note {
     octave: getNoteOctave(
       note,
       notesThatMakeOctaveChange[direction],
-      direction
+      direction,
     ),
   };
 }
@@ -75,12 +75,12 @@ function AugmentedThird(note: Note, direction: "up" | "down" = "up"): Note {
     alteration: getAlterationForAugmentedInterval(
       note,
       direction,
-      specialcases
+      specialcases,
     ),
     octave: getNoteOctave(
       note,
       notesThatMakeOctaveChange[direction],
-      direction
+      direction,
     ),
   };
 }

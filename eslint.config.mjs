@@ -27,4 +27,3 @@ export default [
   },
   eslintConfigPrettier, // Disable conflicting ESLint rules
 ];
-

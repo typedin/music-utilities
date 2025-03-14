@@ -4,7 +4,7 @@
  */
 function formula(
   reference: { value: number; type: "frequency" | "length" },
-  semitones: number
+  semitones: number,
 ): number | never {
   if (reference.type == "length") {
     return reference.value - recursion(reference.value, semitones);

@@ -1,18 +1,18 @@
 {
-    "compilerOptions": {
-	"module": "commonjs" /* Specify what module code is generated. */,
-	"forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
-	"strict": true /* Enable all strict type-checking options. */,
-	"skipLibCheck": true /* Skip type checking all .d.ts files. */,
-	"outDir": "dist",
-	"declaration": true,
-	"target": "ESNext",
-	"sourceMap": true,
-	"baseUrl": ".",
-	"types": ["vitest/globals", "src/types"],
-	"paths": {
-	    "@/*": ["src/*"]
-	}
-    },
-    "include": ["src", "vitest.config.ts"]
+  "compilerOptions": {
+    "module": "commonjs" /* Specify what module code is generated. */,
+    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+    "strict": true /* Enable all strict type-checking options. */,
+    "skipLibCheck": true /* Skip type checking all .d.ts files. */,
+    "outDir": "dist",
+    "declaration": true,
+    "target": "ESNext",
+    "sourceMap": true,
+    "baseUrl": ".",
+    "types": ["vitest/globals", "src/types"],
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src", "vitest.config.ts"]
 }

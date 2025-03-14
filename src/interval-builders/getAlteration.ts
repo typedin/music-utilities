@@ -4,7 +4,7 @@ import { getNextAlteration, getPreviousAlteration } from "../helpers";
 function getAlterationForDiminishedInterval(
   note: Note,
   direction: "up" | "down",
-  specialCases: { up: string[]; down: string[] }
+  specialCases: { up: string[]; down: string[] },
 ): AlterationEnum {
   if (direction == "up") {
     return specialCases[direction].includes(note.name)
@@ -20,7 +20,7 @@ function getAlterationForDiminishedInterval(
 function getAlterationForMinorInterval(
   note: Note,
   direction: "up" | "down",
-  specialCases: { up: string[]; down: string[] }
+  specialCases: { up: string[]; down: string[] },
 ): AlterationEnum {
   if (direction == "up") {
     return specialCases[direction].includes(note.name)
@@ -36,7 +36,7 @@ function getAlterationForMinorInterval(
 function getAlterationForMajorInterval(
   note: Note,
   direction: "up" | "down",
-  specialCases: { up: string[]; down: string[] }
+  specialCases: { up: string[]; down: string[] },
 ): AlterationEnum {
   if (direction == "up") {
     return specialCases[direction].includes(note.name)
@@ -52,7 +52,7 @@ function getAlterationForMajorInterval(
 function getAlterationForAugmentedInterval(
   note: Note,
   direction: "up" | "down",
-  specialCases: { up: string[]; down: string[] }
+  specialCases: { up: string[]; down: string[] },
 ): AlterationEnum {
   if (direction == "up") {
     return specialCases[direction].includes(note.name)
