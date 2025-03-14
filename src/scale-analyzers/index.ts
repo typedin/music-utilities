@@ -1,5 +1,4 @@
 import analyzeInterval from "../interval-analyzers/index";
-import { IScale } from "@/types/musical";
 
 const all_scales = [
   {

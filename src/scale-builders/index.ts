@@ -1,4 +1,3 @@
-import { IScale } from "@/types/musical";
 import AllIntervals from "../interval-builders/index";
 import { spanOver } from "./spanOver";
 
@@ -10,7 +9,7 @@ interface IScaleBuilder {
   scale: () => IScale;
 }
 
-const ScaleBuilder = function (
+const ScaleBuilder = function(
   this: IScaleBuilder,
   tonic: Note,
   scaleSchema: any,
@@ -59,7 +58,7 @@ const ScaleBuilder = function (
     return result;
   };
 } as any as {
-  new (
+  new(
     tonic: Note,
     scaleSchema: any,
     number_of_octaves?: number,
