@@ -1,3 +1,4 @@
+import { Note, Semitones } from "@/types";
 import {
   getAlterationForAugmentedInterval,
   getAlterationForDiminishedInterval,
@@ -5,16 +6,16 @@ import {
 } from "./getAlterationForPerfectInterval";
 import { getName } from "./getName";
 import { getNoteOctave } from "./getNoteOctave";
-import type { Semitones } from "./Semitones";
+import { DiatonicNoteEnum } from "@/constants";
 
 const specialCases = {
-  up: ["F"],
-  down: ["B"],
+  up: ["F"] as Array<DiatonicNoteEnum>,
+  down: ["B"] as Array<DiatonicNoteEnum>,
 };
 
 const notesThatMakeOctaveChange = {
-  up: ["G", "A", "B"],
-  down: ["C", "D", "E"],
+  up: ["G", "A", "B"] as Array<DiatonicNoteEnum>,
+  down: ["C", "D", "E"] as Array<DiatonicNoteEnum>,
 };
 
 const semitones: Semitones = {
