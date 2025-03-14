@@ -1,5 +1,5 @@
-import { IReference } from "@/components/scales/FingerBoard";
 import calculateFrequency from "../frequency-calculator";
+import { IReference, Note } from "@/types";
 
 type interval = {
   direction: string;
@@ -23,7 +23,6 @@ function toAcceptablePercentage(aPercentage: number): number {
 }
 /*
  * @see: https://stackoverflow.com/questions/11832914/how-to-round-to-at-most-2-decimal-places-if-necessary
- * We need to have
  */
 export function frequencyAsPercentage(
   reference: IReference,

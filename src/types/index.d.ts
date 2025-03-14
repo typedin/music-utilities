@@ -2,6 +2,11 @@ import { AlterationEnum, DiatonicNoteEnum } from "../constants";
 
 export type IScale = any;
 
+export type Semitones = {
+  special: { up: number; down: number };
+  normal: { up: number; down: number };
+};
+
 export interface IReference extends Note {
   frequency: number;
 }
