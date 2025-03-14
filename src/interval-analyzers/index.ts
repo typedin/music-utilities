@@ -1,3 +1,4 @@
+import { Interval, Note } from "@/types";
 import { intervalTable, type IntervalTable } from "./interval-table";
 
 type IntervalBuilder = (note: Note, direction: "up" | "down") => Note;
