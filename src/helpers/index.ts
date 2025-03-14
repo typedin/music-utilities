@@ -1,4 +1,4 @@
-import { AlterationEnum, DiatonicNoteEnum } from "@/constants";
+import { AlterationEnum, DiatonicNoteEnum } from "../constants";
 import { isUnison } from "./isUnison";
 
 export function indexOfNote(note: Note): number {

@@ -1,4 +1,4 @@
-import { DiatonicNoteEnum } from "@/constants";
+import { DiatonicNoteEnum } from "../constants";
 import { getNextAlteration, getPreviousAlteration, indexOfNote } from ".";
 
 function areNotesTheSame(firstNote: Note, secondNote: Note): boolean {

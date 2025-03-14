@@ -1,4 +1,4 @@
-import { AlterationEnum, DiatonicNoteEnum, } from "@/constants";
+import { AlterationEnum, DiatonicNoteEnum, } from "../../constants";
 import cycleOfFifths from "../../cycle-of-fifths/index";
 
 describe("index", () => {
