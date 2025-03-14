@@ -1,4 +1,4 @@
-import analyzeInterval from "@/interval-analyzers/index";
+import analyzeInterval from "../../interval-analyzers/index";
 import { expect, describe, it } from "vitest";
 import {
 	A2,

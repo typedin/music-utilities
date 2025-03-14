@@ -23,9 +23,8 @@ import {
 	MajorSecond,
 	MinorSecond,
 	DiminishedSecond,
-} from "@/interval-builders/Second";
+} from "../../interval-builders/Second";
 
-import { describe, it, expect } from "vitest";
 import { A2, AdoubleFlat2, G2, GFlat2 } from "../tests-helpers";
 
 describe("Second", () => {

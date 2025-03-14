@@ -1,5 +1,5 @@
-import equal from "@/frequency-ratio/equal";
-import frenquecyRatio from "@/frequency-ratio/";
+import frenquecyRatio from "../../frequency-ratio/index";
+import equal from "../../frequency-ratio/equal";
 
 const REFERENCE_IN_FREQUENCY = {
 	type: "frequency",

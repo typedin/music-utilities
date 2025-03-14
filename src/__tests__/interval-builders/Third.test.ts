@@ -3,7 +3,7 @@ import {
 	MajorThird,
 	MinorThird,
 	AugmentedThird,
-} from "@/interval-builders/Third";
+} from "../../interval-builders/Third";
 import {
 	augmentedThirdFlats,
 	augmentedThirdNatural,

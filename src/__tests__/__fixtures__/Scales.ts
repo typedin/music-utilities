@@ -1,4 +1,4 @@
-import { AlterationEnum, DiatonicNoteEnum } from "@/constants";
+import { AlterationEnum, DiatonicNoteEnum } from "../../constants";
 
 export const C_MAJOR_SCALE: IScaleDegree[] = [
 	{

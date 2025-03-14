@@ -1,7 +1,7 @@
-import { spanOver } from "@/scale-builders/spanOver";
+import { spanOver } from "../../scale-builders/spanOver";
 import * as Scales from "../__fixtures__/Scales";
 import * as testsHelpers from "../tests-helpers";
-import { beginOn } from "@/scale-builders/beginOn";
+import { beginOn } from "../../scale-builders/beginOn";
 
 describe("spanOver", () => {
 	it("can span over 1 octave", () => {

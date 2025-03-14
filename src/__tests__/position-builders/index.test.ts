@@ -2,7 +2,7 @@ import PositionBuilder from "../../position-builders";
 import { expect } from "vitest";
 import { C_MAJOR_SCALE } from "../__fixtures__/Scales";
 import { A3, A4, E5, G2 } from "../tests-helpers";
-import { buildNoteName } from "@/helpers";
+import { buildNoteName } from "../../helpers";
 
 const scale = C_MAJOR_SCALE;
 describe("TraditionalBuilder", () => {

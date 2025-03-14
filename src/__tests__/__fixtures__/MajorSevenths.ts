@@ -1,1 +1,3 @@
-import { DiatonicNoteEnum, AlterationEnum } from "@/constants";
+import { DiatonicNoteEnum, AlterationEnum } from "../../constants";
+
+// TODO Test this

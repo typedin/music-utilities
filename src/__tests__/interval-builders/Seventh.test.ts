@@ -3,7 +3,7 @@ import {
 	MajorSeventh,
 	MinorSeventh,
 	AugmentedSeventh,
-} from "@/interval-builders/Seventh";
+} from "../../interval-builders/Seventh";
 import { describe, it, expect } from "vitest";
 import {
 	diminishedSeventhFlats,

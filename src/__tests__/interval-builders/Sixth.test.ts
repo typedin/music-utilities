@@ -3,8 +3,7 @@ import {
 	MajorSixth,
 	MinorSixth,
 	AugmentedSixth,
-} from "@/interval-builders/Sixth";
-import { describe, it, expect } from "vitest";
+} from "../../interval-builders/Sixth";
 import {
 	diminishedSixthFlats,
 	diminishedSixthNatural,

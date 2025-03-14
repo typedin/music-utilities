@@ -2,8 +2,8 @@ import {
 	AlterationEnum,
 	DiatonicNoteEnum,
 	ModeEnum,
-} from "@/constants";
-import getRelativeKey from "@/keys";
+} from "../../constants";
+import getRelativeKey from "../../keys";
 
 describe("index", () => {
 	describe("for major keys", () => {

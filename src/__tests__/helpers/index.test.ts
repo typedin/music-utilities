@@ -1,7 +1,7 @@
-import * as helpers from "@/helpers";
+import * as helpers from "../../helpers";
 import { describe, expect, it, test } from "vitest";
 import * as testsHelpers from "../tests-helpers";
-import { AlterationEnum, DiatonicNoteEnum } from "@/constants";
+import { AlterationEnum, DiatonicNoteEnum } from "../../constants";
 import { Eb4_MINOR_MELODIC_ASCENDING } from "../__fixtures__/Scales";
 
 describe("isNoteHigher", () => {

@@ -1,4 +1,4 @@
-import { beginOn } from "@/scale-builders/beginOn";
+import { beginOn } from "../../scale-builders/beginOn";
 import * as Scales from "../__fixtures__/Scales";
 import * as testsHelpers from "../tests-helpers";
 

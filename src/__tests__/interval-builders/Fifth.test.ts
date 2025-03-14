@@ -3,7 +3,7 @@ import {
 	AugmentedFifth,
 	PerfectFifth,
 	DiminishedFifth,
-} from "@/interval-builders/Fifth";
+} from "../../interval-builders/Fifth";
 import * as Fifths from "../__fixtures__/Fifths";
 
 describe("Fifth", () => {
