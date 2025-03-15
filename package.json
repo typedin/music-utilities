@@ -1,17 +1,15 @@
 {
   "name": "@typedin/music-utilities",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
   "types": "dist/types/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.es.js",
-      "require": "./dist/index.cjs.js"
+      "require": "./dist/index.cjs.js",
+      "types": "./dist/types/index.d.ts"
     }
-  },
-  "./types": {
-    "import": "./dist/types/index.d.ts"
   },
   "scripts": {
     "prebuild": "rimraf dist",
@@ -32,7 +30,7 @@
   ],
   "author": "typedin",
   "license": "ISC",
-  "description": "A set of ressources I use to develop music applications",
+  "description": "A set of resources I use to develop music applications",
   "devDependencies": {
     "@eslint/js": "^9.22.0",
     "@types/node": "^22.13.10",
@@ -49,3 +47,4 @@
     "vitest": "^3.0.8"
   }
 }
+
