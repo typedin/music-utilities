@@ -13,7 +13,6 @@ jobs:
       matrix:
         node-version: [22]  # Test against multiple Node.js versions
 
-
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
@@ -42,8 +41,6 @@ jobs:
 
     - name: Run build
       run: npm run build  # Ensure this command correctly builds your project
-      env:
-        GITHUB_TOKEN: ${{ secrets.MusicUtilitiesToken }}
 
     - name: Deploy
       run: npm run deploy  # Use a deploy script or GitHub Pages for deployment
