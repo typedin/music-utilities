@@ -43,12 +43,12 @@ jobs:
     - name: Run build
       run: npm run build  # Ensure this command correctly builds your project
       env:
-        GITHUB_TOKEN: ${{ secrets.MusicUtilitiesToken }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Deploy
       run: npm run deploy  # Use a deploy script or GitHub Pages for deployment
       env:
-        GITHUB_TOKEN: ${{ secrets.MusicUtilitiesToken }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Clean up
       run: |
@@ -59,4 +59,4 @@ jobs:
         git push origin main  # Pushes the changes to the main branch (adjust the branch as needed)
       if: success()
       env:
-        GITHUB_TOKEN: ${{ secrets.MusicUtilitiesToken }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
