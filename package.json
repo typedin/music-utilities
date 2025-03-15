@@ -10,10 +10,9 @@
     "format": "prettier --write \"src/**/*.{js,ts,tsx,jsx,json,md}\"",
     "lint": "eslint . --ext .ts",
     "prepublishOnly": "npm run build",
-    "test": "vitest --config tsconfig.json",
-    "test:vitest": "vitest --config tsconfig.json",
-    "test:watch": "vitest --watch --config tsconfig.json",
-    "test:coverage": "vitest --coverage --config tsconfig.json"
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest --coverage"
   },
   "keywords": [
     "music",
@@ -22,7 +21,7 @@
   ],
   "author": "typedin",
   "license": "ISC",
-  "description": "",
+  "description": "A set of ressources I use to develop music applications",
   "devDependencies": {
     "@eslint/js": "^9.22.0",
     "@types/node": "^22.13.10",
