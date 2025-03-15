@@ -6,7 +6,7 @@
   "files": [
     "dist"
   ],
-  "types": "dist/types/index.d.ts",
+  "types": "src/types/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.es.js",
@@ -18,9 +18,8 @@
   },
   "scripts": {
     "prebuild": "rimraf dist",
-    "check-exports": "attw --pack .",
+    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
     "build": "vite build && tsc",
-    "postbuild": "cp src/types/index.d.ts dist/types/index.d.ts",
     "check-types": "tsc --noEmit",
     "format": "prettier --write \"src/**/*.{js,ts,tsx,jsx,json,md}\"",
     "lint": "eslint . --ext .ts",
