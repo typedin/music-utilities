@@ -16,6 +16,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "vite build && tsc",
+    "postbuild": "cp src/types/index.d.ts dist/types/index.d.ts",
     "check-types": "tsc --noEmit",
     "format": "prettier --write \"src/**/*.{js,ts,tsx,jsx,json,md}\"",
     "lint": "eslint . --ext .ts",
