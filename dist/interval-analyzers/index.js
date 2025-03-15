@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = IntervalAnalyzer;
-const interval_table_1 = require("./interval-table");
+import { intervalTable } from "./interval-table";
 function createInterval(callback, direction, firstNote, secondNote) {
     const transposedNote = callback(firstNote, direction);
     return (transposedNote.name == secondNote.name &&
@@ -52,8 +49,8 @@ function intervalDown(firstNote, secondNote, intervalTable) {
     } while (currentOctave <= 12);
     return undefined;
 }
-function IntervalAnalyzer(firstNote, secondNote) {
-    return (intervalUp(firstNote, secondNote, interval_table_1.intervalTable) ||
-        intervalDown(firstNote, secondNote, interval_table_1.intervalTable));
+export default function IntervalAnalyzer(firstNote, secondNote) {
+    return (intervalUp(firstNote, secondNote, intervalTable) ||
+        intervalDown(firstNote, secondNote, intervalTable));
 }
 //# sourceMappingURL=index.js.map

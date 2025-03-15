@@ -4,9 +4,8 @@
     "declaration": true,
     "declarationDir": "dist/types",
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "noImplicitAny": false,
     "outDir": "dist",
     "paths": {
@@ -21,6 +20,6 @@
     "target": "ESNext",
     "types": ["vitest/globals"]
   },
-  "include": ["src", "src/types/index.d.ts"],
+  "include": ["src/**/*.ts", "src/types/**/*.d.ts"],
   "exclude": ["dist", "node_modules", "src/__tests__"]
 }

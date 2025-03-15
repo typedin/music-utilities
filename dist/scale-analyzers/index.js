@@ -1,10 +1,4 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = analyzeScale;
-const index_1 = __importDefault(require("../interval-analyzers/index"));
+import analyzeInterval from "../interval-analyzers/index";
 const all_scales = [
     {
         name: "major",
@@ -77,13 +71,13 @@ const all_scales = [
         ],
     },
 ];
-function analyzeScale(scale) {
+export default function analyzeScale(scale) {
     let result = undefined;
     outer: for (const lookup of all_scales) {
         for (let i = 0; i < lookup.structure.length; i++) {
             // analyse the scale by comparing the first degree with each other one
             // @ts-ignore
-            const { direction, type, quality } = (0, index_1.default)(scale.at(0), scale.at(i + 1));
+            const { direction, type, quality } = analyzeInterval(scale.at(0), scale.at(i + 1));
             if (direction == lookup.structure[i].direction &&
                 type == lookup.structure[i].type &&
                 quality == lookup.structure[i].quality) {

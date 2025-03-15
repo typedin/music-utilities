@@ -1,48 +1,45 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.isUnison = isUnison;
-const constants_1 = require("../constants");
-const _1 = require(".");
+import { DiatonicNoteEnum } from "../constants";
+import { getNextAlteration, getPreviousAlteration, indexOfNote } from ".";
 function areNotesTheSame(firstNote, secondNote) {
     return (firstNote.octave == secondNote.octave && firstNote.name == secondNote.name);
 }
 function isNoteB(aNote) {
-    return aNote.name == constants_1.DiatonicNoteEnum.B;
+    return aNote.name == DiatonicNoteEnum.B;
 }
 function areNotesSeconds(firstNote, secondNote) {
-    return (Math.abs((0, _1.indexOfNote)(secondNote) - (0, _1.indexOfNote)(firstNote)) < 2 ||
-        Math.abs((0, _1.indexOfNote)(firstNote) - (0, _1.indexOfNote)(secondNote)) < 2);
+    return (Math.abs(indexOfNote(secondNote) - indexOfNote(firstNote)) < 2 ||
+        Math.abs(indexOfNote(firstNote) - indexOfNote(secondNote)) < 2);
 }
 function areNotesSpecialSecondsDown(firstNote, secondNote) {
-    return (((firstNote.name == constants_1.DiatonicNoteEnum.F &&
-        secondNote.name == constants_1.DiatonicNoteEnum.E) ||
-        (firstNote.name == constants_1.DiatonicNoteEnum.C && isNoteB(secondNote))) &&
+    return (((firstNote.name == DiatonicNoteEnum.F &&
+        secondNote.name == DiatonicNoteEnum.E) ||
+        (firstNote.name == DiatonicNoteEnum.C && isNoteB(secondNote))) &&
         areNotesSeconds(firstNote, secondNote));
 }
 function areNotesDiminishedSeconds(firstNote, secondNote) {
-    return ((0, _1.getNextAlteration)(secondNote.alteration) ==
-        (0, _1.getPreviousAlteration)(firstNote.alteration) ||
-        (0, _1.getPreviousAlteration)(secondNote.alteration) ==
-            (0, _1.getNextAlteration)(firstNote.alteration));
+    return (getNextAlteration(secondNote.alteration) ==
+        getPreviousAlteration(firstNote.alteration) ||
+        getPreviousAlteration(secondNote.alteration) ==
+            getNextAlteration(firstNote.alteration));
 }
 function areNotesSpecialSecondsUp(firstNote, secondNote) {
-    return (((firstNote.name == constants_1.DiatonicNoteEnum.E &&
-        secondNote.name == constants_1.DiatonicNoteEnum.F) ||
-        (isNoteB(firstNote) && secondNote.name == constants_1.DiatonicNoteEnum.C)) &&
+    return (((firstNote.name == DiatonicNoteEnum.E &&
+        secondNote.name == DiatonicNoteEnum.F) ||
+        (isNoteB(firstNote) && secondNote.name == DiatonicNoteEnum.C)) &&
         areNotesSeconds(firstNote, secondNote));
 }
 function isComparingCandB(firstNote, secondNote) {
-    if (secondNote.name == constants_1.DiatonicNoteEnum.C &&
+    if (secondNote.name == DiatonicNoteEnum.C &&
         firstNote.octave == secondNote.octave - 1) {
         return true;
     }
-    if (firstNote.name == constants_1.DiatonicNoteEnum.C &&
+    if (firstNote.name == DiatonicNoteEnum.C &&
         firstNote.octave - 1 == secondNote.octave) {
         return true;
     }
     return false;
 }
-function isUnison(firstNote, secondNote, strict = false) {
+export function isUnison(firstNote, secondNote, strict = false) {
     if (strict && !areNotesTheSame(firstNote, secondNote)) {
         return false;
     }
@@ -52,16 +49,16 @@ function isUnison(firstNote, secondNote, strict = false) {
         return firstNote.alteration == secondNote.alteration;
     }
     if (isNoteB(secondNote) && isComparingCandB(firstNote, secondNote)) {
-        return (0, _1.getNextAlteration)(firstNote.alteration) == secondNote.alteration;
+        return getNextAlteration(firstNote.alteration) == secondNote.alteration;
     }
     if (isNoteB(firstNote) && isComparingCandB(firstNote, secondNote)) {
-        return (0, _1.getPreviousAlteration)(firstNote.alteration) == secondNote.alteration;
+        return getPreviousAlteration(firstNote.alteration) == secondNote.alteration;
     }
     if (areNotesSpecialSecondsUp(firstNote, secondNote)) {
-        return (0, _1.getPreviousAlteration)(firstNote.alteration) == secondNote.alteration;
+        return getPreviousAlteration(firstNote.alteration) == secondNote.alteration;
     }
     if (areNotesSpecialSecondsDown(firstNote, secondNote)) {
-        return (0, _1.getPreviousAlteration)(secondNote.alteration) == firstNote.alteration;
+        return getPreviousAlteration(secondNote.alteration) == firstNote.alteration;
     }
     if (areNotesDiminishedSeconds(firstNote, secondNote)) {
         return true;

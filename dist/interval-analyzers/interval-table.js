@@ -1,183 +1,180 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.intervalTable = void 0;
-const Unison_1 = require("../interval-builders/Unison");
-const Third_1 = require("../interval-builders/Third");
-const Fourth_1 = require("../interval-builders/Fourth");
-const Fifth_1 = require("../interval-builders/Fifth");
-const Seventh_1 = require("../interval-builders/Seventh");
-const Sixth_1 = require("../interval-builders/Sixth");
-const Octave_1 = require("../interval-builders/Octave");
-const Second_1 = require("../interval-builders/Second");
+import { DiminishedUnison, PerfectUnison, AugmentedUnison, } from "../interval-builders/Unison";
+import { AugmentedThird, DiminishedThird, MajorThird, MinorThird, } from "../interval-builders/Third";
+import { AugmentedFourth, DiminishedFourth, PerfectFourth, } from "../interval-builders/Fourth";
+import { AugmentedFifth, DiminishedFifth, PerfectFifth, } from "../interval-builders/Fifth";
+import { AugmentedSeventh, DiminishedSeventh, MajorSeventh, MinorSeventh, } from "../interval-builders/Seventh";
+import { AugmentedSixth, DiminishedSixth, MajorSixth, MinorSixth, } from "../interval-builders/Sixth";
+import { AugmentedOctave, DiminishedOctave, PerfectOctave, } from "../interval-builders/Octave";
+import { AugmentedSecond, DiminishedSecond, MajorSecond, MinorSecond, } from "../interval-builders/Second";
 const intervalTable = [
     {
         type: "unison",
         quality: "diminished",
-        callback: Unison_1.DiminishedUnison,
+        callback: DiminishedUnison,
         halfsteps: -1,
     },
     {
         type: "unison",
         quality: "perfect",
-        callback: Unison_1.PerfectUnison,
+        callback: PerfectUnison,
         halfsteps: 0,
     },
     {
         type: "unison",
         quality: "augmented",
-        callback: Unison_1.AugmentedUnison,
+        callback: AugmentedUnison,
         halfsteps: 1,
     },
     {
         type: "second",
         quality: "diminished",
-        callback: Second_1.DiminishedSecond,
+        callback: DiminishedSecond,
         halfsteps: 0,
     },
     {
         type: "second",
         quality: "minor",
-        callback: Second_1.MinorSecond,
+        callback: MinorSecond,
         halfsteps: 1,
     },
     {
         type: "second",
         quality: "major",
-        callback: Second_1.MajorSecond,
+        callback: MajorSecond,
         halfsteps: 2,
     },
     {
         type: "second",
         quality: "augmented",
-        callback: Second_1.AugmentedSecond,
+        callback: AugmentedSecond,
         halfsteps: 3,
     },
     {
         type: "third",
         quality: "diminished",
-        callback: Third_1.DiminishedThird,
+        callback: DiminishedThird,
         halfsteps: 2,
     },
     {
         type: "third",
         quality: "minor",
-        callback: Third_1.MinorThird,
+        callback: MinorThird,
         halfsteps: 3,
     },
     {
         type: "third",
         quality: "major",
-        callback: Third_1.MajorThird,
+        callback: MajorThird,
         halfsteps: 4,
     },
     {
         type: "third",
         quality: "augmented",
-        callback: Third_1.AugmentedThird,
+        callback: AugmentedThird,
         halfsteps: 5,
     },
     {
         type: "fourth",
         quality: "diminished",
-        callback: Fourth_1.DiminishedFourth,
+        callback: DiminishedFourth,
         halfsteps: 4,
     },
     {
         type: "fourth",
         quality: "perfect",
-        callback: Fourth_1.PerfectFourth,
+        callback: PerfectFourth,
         halfsteps: 5,
     },
     {
         type: "fourth",
         quality: "augmented",
-        callback: Fourth_1.AugmentedFourth,
+        callback: AugmentedFourth,
         halfsteps: 6,
     },
     {
         type: "fifth",
         quality: "diminished",
-        callback: Fifth_1.DiminishedFifth,
+        callback: DiminishedFifth,
         halfsteps: 6,
     },
     {
         type: "fifth",
         quality: "perfect",
-        callback: Fifth_1.PerfectFifth,
+        callback: PerfectFifth,
         halfsteps: 7,
     },
     {
         type: "fifth",
         quality: "augmented",
-        callback: Fifth_1.AugmentedFifth,
+        callback: AugmentedFifth,
         halfsteps: 8,
     },
     {
         type: "sixth",
         quality: "diminished",
-        callback: Sixth_1.DiminishedSixth,
+        callback: DiminishedSixth,
         halfsteps: 7,
     },
     {
         type: "sixth",
         quality: "minor",
-        callback: Sixth_1.MinorSixth,
+        callback: MinorSixth,
         halfsteps: 8,
     },
     {
         type: "sixth",
         quality: "major",
-        callback: Sixth_1.MajorSixth,
+        callback: MajorSixth,
         halfsteps: 9,
     },
     {
         type: "sixth",
         quality: "augmented",
-        callback: Sixth_1.AugmentedSixth,
+        callback: AugmentedSixth,
         halfsteps: 10,
     },
     {
         type: "seventh",
         quality: "diminished",
-        callback: Seventh_1.DiminishedSeventh,
+        callback: DiminishedSeventh,
         halfsteps: 9,
     },
     {
         type: "seventh",
         quality: "minor",
-        callback: Seventh_1.MinorSeventh,
+        callback: MinorSeventh,
         halfsteps: 10,
     },
     {
         type: "seventh",
         quality: "major",
-        callback: Seventh_1.MajorSeventh,
+        callback: MajorSeventh,
         halfsteps: 11,
     },
     {
         type: "seventh",
         quality: "augmented",
-        callback: Seventh_1.AugmentedSeventh,
+        callback: AugmentedSeventh,
         halfsteps: 12,
     },
     {
         type: "octave",
         quality: "diminished",
-        callback: Octave_1.DiminishedOctave,
+        callback: DiminishedOctave,
         halfsteps: 11,
     },
     {
         type: "octave",
         quality: "perfect",
-        callback: Octave_1.PerfectOctave,
+        callback: PerfectOctave,
         halfsteps: 12,
     },
     {
         type: "octave",
         quality: "augmented",
-        callback: Octave_1.AugmentedOctave,
+        callback: AugmentedOctave,
         halfsteps: 13,
     },
 ];
-exports.intervalTable = intervalTable;
+export { intervalTable };
 //# sourceMappingURL=interval-table.js.map

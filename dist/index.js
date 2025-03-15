@@ -1,29 +1,13 @@
-"use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __exportStar = (this && this.__exportStar) || function(m, exports) {
-    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-__exportStar(require("./cycle-of-fifths"), exports);
-__exportStar(require("./frequency-calculator"), exports);
-__exportStar(require("./frequency-ratio"), exports);
-__exportStar(require("./helpers"), exports);
-__exportStar(require("./interval-analyzers"), exports);
-__exportStar(require("./interval-builders"), exports);
-__exportStar(require("./keys"), exports);
-__exportStar(require("./note-position"), exports);
-__exportStar(require("./position-builders"), exports);
-__exportStar(require("./scale-analyzers"), exports);
-__exportStar(require("./scale-builders"), exports);
-__exportStar(require("./transposition"), exports);
+export * from "./cycle-of-fifths";
+export * from "./frequency-calculator";
+export * from "./frequency-ratio";
+export * from "./helpers";
+export * from "./interval-analyzers";
+export * from "./interval-builders";
+export * from "./keys";
+export * from "./note-position";
+export * from "./position-builders";
+export * from "./scale-analyzers";
+export * from "./scale-builders";
+export * from "./transposition";
 //# sourceMappingURL=index.js.map

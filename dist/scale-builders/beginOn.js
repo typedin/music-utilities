@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.beginOn = beginOn;
-const constants_1 = require("../constants");
-function beginOn(scale, startingNote) {
+import { DiatonicNoteEnum } from "../constants";
+export function beginOn(scale, startingNote) {
     const indexOfFirstDegree = scale.findIndex((degree) => degree.name == startingNote.name);
     const firstPart = scale.slice(indexOfFirstDegree, scale.length);
     const secondPart = scale.slice(0, indexOfFirstDegree);
@@ -15,7 +12,7 @@ function beginOn(scale, startingNote) {
         else {
             degree.octave = startingNote.octave;
         }
-        if (degree.name == constants_1.DiatonicNoteEnum.B) {
+        if (degree.name == DiatonicNoteEnum.B) {
             hasTheNoteB = true;
         }
         degree.order = index + 1;

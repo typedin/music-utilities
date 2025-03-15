@@ -1,17 +1,14 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = getRelativeKey;
-const constants_1 = require("../constants");
-const Sixth_1 = require("../interval-builders/Sixth");
-const Third_1 = require("../interval-builders/Third");
-function getRelativeKey(aTonality) {
-    const { name, alteration } = aTonality.mode == constants_1.ModeEnum.M
-        ? (0, Sixth_1.MajorSixth)({
+import { ModeEnum } from "../constants";
+import { MajorSixth } from "../interval-builders/Sixth";
+import { MinorThird } from "../interval-builders/Third";
+export default function getRelativeKey(aTonality) {
+    const { name, alteration } = aTonality.mode == ModeEnum.M
+        ? MajorSixth({
             name: aTonality.tonality,
             alteration: aTonality.alteration,
             octave: 1,
         })
-        : (0, Third_1.MinorThird)({
+        : MinorThird({
             name: aTonality.tonality,
             alteration: aTonality.alteration,
             octave: 1,
@@ -19,7 +16,7 @@ function getRelativeKey(aTonality) {
     return {
         tonality: name,
         alteration,
-        mode: aTonality.mode === constants_1.ModeEnum.M ? constants_1.ModeEnum.m : constants_1.ModeEnum.M,
+        mode: aTonality.mode === ModeEnum.M ? ModeEnum.m : ModeEnum.M,
     };
 }
 //# sourceMappingURL=index.js.map

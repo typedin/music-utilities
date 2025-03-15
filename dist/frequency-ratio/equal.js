@@ -1,6 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = equal;
 /**
  * logic has been taken from here:
  * https://cmtext.indiana.edu/acoustics/chapter1_pitch.php
@@ -20,7 +17,7 @@ function recursion(value, semitones) {
     }
     return recursion((value * 94.39) / 100, semitones - 1);
 }
-function equal(reference) {
+export default function equal(reference) {
     const P1 = {
         up: formula(reference, 0),
     };

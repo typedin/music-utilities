@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.intervals = exports.ScaleFunction = exports.ModeEnum = exports.DiatonicNoteEnum = exports.AlterationEnum = exports.FingerEnum = exports.NB_OF_SEMITONES = void 0;
-exports.NB_OF_SEMITONES = 12;
-var FingerEnum;
+export const NB_OF_SEMITONES = 12;
+export var FingerEnum;
 (function (FingerEnum) {
     FingerEnum["thumb"] = "+";
     FingerEnum["first"] = "1";
@@ -10,16 +7,16 @@ var FingerEnum;
     FingerEnum["third"] = "3";
     FingerEnum["fourth"] = "4";
     FingerEnum["fifth"] = "5";
-})(FingerEnum || (exports.FingerEnum = FingerEnum = {}));
-var AlterationEnum;
+})(FingerEnum || (FingerEnum = {}));
+export var AlterationEnum;
 (function (AlterationEnum) {
     AlterationEnum["doubleFlat"] = "\uD834\uDD2B";
     AlterationEnum["flat"] = "\u266D";
     AlterationEnum["natural"] = "";
     AlterationEnum["sharp"] = "\u266F";
     AlterationEnum["doubleSharp"] = "\uD834\uDD2A";
-})(AlterationEnum || (exports.AlterationEnum = AlterationEnum = {}));
-var DiatonicNoteEnum;
+})(AlterationEnum || (AlterationEnum = {}));
+export var DiatonicNoteEnum;
 (function (DiatonicNoteEnum) {
     DiatonicNoteEnum["C"] = "C";
     DiatonicNoteEnum["C_SHARP"] = "undeclared c-sharp";
@@ -33,13 +30,13 @@ var DiatonicNoteEnum;
     DiatonicNoteEnum["A"] = "A";
     DiatonicNoteEnum["A_SHARP"] = "undeclared a-sharp";
     DiatonicNoteEnum["B"] = "B";
-})(DiatonicNoteEnum || (exports.DiatonicNoteEnum = DiatonicNoteEnum = {}));
-var ModeEnum;
+})(DiatonicNoteEnum || (DiatonicNoteEnum = {}));
+export var ModeEnum;
 (function (ModeEnum) {
     ModeEnum["M"] = "Major";
     ModeEnum["m"] = "Minor";
-})(ModeEnum || (exports.ModeEnum = ModeEnum = {}));
-exports.ScaleFunction = [
+})(ModeEnum || (ModeEnum = {}));
+export const ScaleFunction = [
     "tonic",
     "supertonic",
     "mediant",
@@ -48,7 +45,7 @@ exports.ScaleFunction = [
     "submediant",
     "leading tone",
 ];
-exports.intervals = [
+export const intervals = [
     {
         type: "DiminishedSecond",
         name: "second",

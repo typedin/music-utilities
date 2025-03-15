@@ -1,37 +1,32 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.getAlterationForDiminishedInterval = getAlterationForDiminishedInterval;
-exports.getAlterationForPerfectInterval = getAlterationForPerfectInterval;
-exports.getAlterationForAugmentedInterval = getAlterationForAugmentedInterval;
-const helpers_1 = require("../helpers");
-function getAlterationForDiminishedInterval(note, direction, specialCases) {
+import { getNextAlteration, getPreviousAlteration } from "../helpers";
+export function getAlterationForDiminishedInterval(note, direction, specialCases) {
     if (direction == "up") {
         return specialCases[direction].includes(note.name)
-            ? (0, helpers_1.getPreviousAlteration)((0, helpers_1.getPreviousAlteration)(note.alteration))
-            : (0, helpers_1.getPreviousAlteration)(note.alteration);
+            ? getPreviousAlteration(getPreviousAlteration(note.alteration))
+            : getPreviousAlteration(note.alteration);
     }
     return specialCases[direction].includes(note.name)
-        ? (0, helpers_1.getNextAlteration)((0, helpers_1.getNextAlteration)(note.alteration))
-        : (0, helpers_1.getNextAlteration)(note.alteration);
+        ? getNextAlteration(getNextAlteration(note.alteration))
+        : getNextAlteration(note.alteration);
 }
-function getAlterationForPerfectInterval(note, direction, specialCases) {
+export function getAlterationForPerfectInterval(note, direction, specialCases) {
     if (direction == "up") {
         return specialCases[direction].includes(note.name)
-            ? (0, helpers_1.getPreviousAlteration)(note.alteration)
+            ? getPreviousAlteration(note.alteration)
             : note.alteration;
     }
     return specialCases[direction].includes(note.name)
-        ? (0, helpers_1.getNextAlteration)(note.alteration)
+        ? getNextAlteration(note.alteration)
         : note.alteration;
 }
-function getAlterationForAugmentedInterval(note, direction, specialCases) {
+export function getAlterationForAugmentedInterval(note, direction, specialCases) {
     if (direction == "up") {
         return specialCases[direction].includes(note.name)
-            ? (0, helpers_1.getNextAlteration)((0, helpers_1.getNextAlteration)(note.alteration))
-            : (0, helpers_1.getNextAlteration)(note.alteration);
+            ? getNextAlteration(getNextAlteration(note.alteration))
+            : getNextAlteration(note.alteration);
     }
     return specialCases[direction].includes(note.name)
-        ? (0, helpers_1.getPreviousAlteration)((0, helpers_1.getPreviousAlteration)(note.alteration))
-        : (0, helpers_1.getPreviousAlteration)(note.alteration);
+        ? getPreviousAlteration(getPreviousAlteration(note.alteration))
+        : getPreviousAlteration(note.alteration);
 }
 //# sourceMappingURL=getAlterationForPerfectInterval.js.map

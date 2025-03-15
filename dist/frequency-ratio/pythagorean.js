@@ -1,17 +1,14 @@
-"use strict";
 /**
  * logic has been taken from here:
  * https://www.teoria.com/en/articles/temperaments/02-pythagoras.php
  */
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = Pythagorean;
 function perfectFifthUp(frequency) {
     return (frequency * 3) / 2;
 }
 function perfectForthDown(frequency) {
     return (frequency * 3) / 4;
 }
-function Pythagorean(reference) {
+export default function Pythagorean(reference) {
     const M2 = {
         up: perfectForthDown(perfectFifthUp(reference)),
     };

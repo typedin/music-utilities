@@ -1,12 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.DiminishedThird = DiminishedThird;
-exports.MinorThird = MinorThird;
-exports.MajorThird = MajorThird;
-exports.AugmentedThird = AugmentedThird;
-const getAlteration_1 = require("./getAlteration");
-const getName_1 = require("./getName");
-const getNoteOctave_1 = require("./getNoteOctave");
+import { getAlterationForAugmentedInterval, getAlterationForDiminishedInterval, getAlterationForMajorInterval, getAlterationForMinorInterval, } from "./getAlteration";
+import { getName } from "./getName";
+import { getNoteOctave } from "./getNoteOctave";
 const specialcases = {
     up: ["D", "E", "A", "B"],
     down: ["C", "F", "G", "D"],
@@ -27,30 +21,31 @@ const semitones = {
 };
 function DiminishedThird(note, direction = "up") {
     return {
-        name: (0, getName_1.getName)(note, direction, semitones, specialcases),
-        alteration: (0, getAlteration_1.getAlterationForDiminishedInterval)(note, direction, specialcases),
-        octave: (0, getNoteOctave_1.getNoteOctave)(note, notesThatMakeOctaveChange[direction], direction),
+        name: getName(note, direction, semitones, specialcases),
+        alteration: getAlterationForDiminishedInterval(note, direction, specialcases),
+        octave: getNoteOctave(note, notesThatMakeOctaveChange[direction], direction),
     };
 }
 function MinorThird(note, direction = "up") {
     return {
-        name: (0, getName_1.getName)(note, direction, semitones, specialcases),
-        alteration: (0, getAlteration_1.getAlterationForMinorInterval)(note, direction, specialcases),
-        octave: (0, getNoteOctave_1.getNoteOctave)(note, notesThatMakeOctaveChange[direction], direction),
+        name: getName(note, direction, semitones, specialcases),
+        alteration: getAlterationForMinorInterval(note, direction, specialcases),
+        octave: getNoteOctave(note, notesThatMakeOctaveChange[direction], direction),
     };
 }
 function MajorThird(note, direction = "up") {
     return {
-        name: (0, getName_1.getName)(note, direction, semitones, specialcases),
-        alteration: (0, getAlteration_1.getAlterationForMajorInterval)(note, direction, specialcases),
-        octave: (0, getNoteOctave_1.getNoteOctave)(note, notesThatMakeOctaveChange[direction], direction),
+        name: getName(note, direction, semitones, specialcases),
+        alteration: getAlterationForMajorInterval(note, direction, specialcases),
+        octave: getNoteOctave(note, notesThatMakeOctaveChange[direction], direction),
     };
 }
 function AugmentedThird(note, direction = "up") {
     return {
-        name: (0, getName_1.getName)(note, direction, semitones, specialcases),
-        alteration: (0, getAlteration_1.getAlterationForAugmentedInterval)(note, direction, specialcases),
-        octave: (0, getNoteOctave_1.getNoteOctave)(note, notesThatMakeOctaveChange[direction], direction),
+        name: getName(note, direction, semitones, specialcases),
+        alteration: getAlterationForAugmentedInterval(note, direction, specialcases),
+        octave: getNoteOctave(note, notesThatMakeOctaveChange[direction], direction),
     };
 }
+export { DiminishedThird, MinorThird, MajorThird, AugmentedThird };
 //# sourceMappingURL=Third.js.map

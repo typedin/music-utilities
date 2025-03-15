@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.spanOver = spanOver;
-function spanOver(scale, numberOfOctaves) {
+export function spanOver(scale, numberOfOctaves) {
     const result = [];
     for (let i = 0; i < numberOfOctaves; i++) {
         scale.forEach((el) => {
