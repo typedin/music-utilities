@@ -43,9 +43,6 @@ describe("isUnison", () => {
 
   it("is true for enharmonies", () => {
     expect(isUnison.isUnison(testsHelpers.Cb4, testsHelpers.B3)).toBe(true);
-  });
-
-  it("is true for enharmonies", () => {
     expect(isUnison.isUnison(testsHelpers.B3, testsHelpers.Cb4)).toBe(true);
   });
 

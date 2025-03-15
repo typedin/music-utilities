@@ -25,7 +25,7 @@ import {
   minorThirdNatural,
   minorThirdSharps,
 } from "../__fixtures__/MinorThirds";
-import { AdoubleFlat2, C3, C4 } from "../tests-helpers";
+import { AdoubleFlat2, C3 } from "../tests-helpers";
 
 describe("Thirds", () => {
   describe("Diminished", () => {

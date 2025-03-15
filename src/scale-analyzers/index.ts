@@ -1,4 +1,4 @@
-import { IScale } from "@/types";
+import { IScale } from "../types";
 import analyzeInterval from "../interval-analyzers/index";
 
 const all_scales = [
@@ -77,11 +77,11 @@ const all_scales = [
 export default function analyzeScale(scale: IScale): string | undefined {
   let result: string | undefined = undefined;
 
-  outer: for (let lookup of all_scales) {
+  outer: for (const lookup of all_scales) {
     for (let i = 0; i < lookup.structure.length; i++) {
       // analyse the scale by comparing the first degree with each other one
       // @ts-ignore
-      let { direction, type, quality } = analyzeInterval(
+      const { direction, type, quality } = analyzeInterval(
         scale.at(0),
         scale.at(i + 1),
       );

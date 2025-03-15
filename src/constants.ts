@@ -18,16 +18,16 @@ export enum AlterationEnum {
 
 export enum DiatonicNoteEnum {
   C = "C",
-  C_SHARP = "-",
+  C_SHARP = "undeclared c-sharp",
   D = "D",
-  D_SHARP = "-",
+  D_SHARP = "undeclared d-sharp",
   E = "E",
   F = "F",
-  F_SHARP = "-",
+  F_SHARP = "undeclared f-sharp",
   G = "G",
-  G_SHARP = "-",
+  G_SHARP = "undeclared g-sharp",
   A = "A",
-  A_SHARP = "-",
+  A_SHARP = "undeclared a-sharp",
   B = "B",
 }
 

@@ -1,6 +1,6 @@
 import { DiatonicNoteEnum } from "../constants";
 import { getNextAlteration, getPreviousAlteration, indexOfNote } from ".";
-import { Note } from "@/types";
+import { Note } from "../types";
 
 function areNotesTheSame(firstNote: Note, secondNote: Note): boolean {
   return (
@@ -68,7 +68,7 @@ function isComparingCandB(firstNote: Note, secondNote: Note) {
 export function isUnison(
   firstNote: Note,
   secondNote: Note,
-  strict: Boolean = false,
+  strict: boolean = false,
 ): boolean {
   if (strict && !areNotesTheSame(firstNote, secondNote)) {
     return false;

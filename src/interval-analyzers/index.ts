@@ -1,4 +1,4 @@
-import { Interval, Note } from "@/types";
+import { Interval, Note } from "../types";
 import { intervalTable, type IntervalTable } from "./interval-table";
 
 type IntervalBuilder = (note: Note, direction: "up" | "down") => Note;
@@ -25,7 +25,7 @@ function intervalUp(
 ): Interval | undefined {
   let currentOctave = secondNote.octave;
   do {
-    for (let interval of intervalTable) {
+    for (const interval of intervalTable) {
       if (
         createInterval(interval.callback, "up", firstNote, {
           ...secondNote,
@@ -56,7 +56,7 @@ function intervalDown(
   let currentOctave = secondNote.octave;
 
   do {
-    for (let interval of intervalTable) {
+    for (const interval of intervalTable) {
       const difference = 12 * (currentOctave - secondNote.octave);
       if (
         createInterval(interval.callback, "down", firstNote, {

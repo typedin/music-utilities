@@ -110,7 +110,7 @@ describe("parseNoteName", () => {
     });
   });
 
-  it("parses sharped notes", () => {
+  it("parses sharp notes", () => {
     expect(helpers.parseNoteName("C#5")).toEqual({
       name: "C",
       alteration: "#",
@@ -118,7 +118,7 @@ describe("parseNoteName", () => {
     });
   });
 
-  it("parses double sharped notes", () => {
+  it("parses double sharp notes", () => {
     expect(helpers.parseNoteName("C𝄪5")).toEqual({
       name: "C",
       alteration: "𝄪",
@@ -126,7 +126,7 @@ describe("parseNoteName", () => {
     });
   });
 
-  it("parses sharped notes", () => {
+  it("parses flat notes", () => {
     expect(helpers.parseNoteName("Cb5")).toEqual({
       name: "C",
       alteration: "b",
@@ -134,7 +134,7 @@ describe("parseNoteName", () => {
     });
   });
 
-  it("parses double sharped notes", () => {
+  it("parses double flat notes", () => {
     expect(helpers.parseNoteName("C♭♭5")).toEqual({
       name: "C",
       alteration: "♭♭",
@@ -153,12 +153,12 @@ describe("buildNoteName", () => {
     expect(helpers.buildNoteName(input)).toEqual("C5");
   });
 
-  it("builds sharped notes", () => {
+  it("builds sharp notes", () => {
     const expectation = "C♯5";
     expect(helpers.buildNoteName(testsHelpers.Csharp5)).toEqual(expectation);
   });
 
-  it("builds double sharped notes", () => {
+  it("builds double sharp notes", () => {
     const input = {
       name: DiatonicNoteEnum.C,
       alteration: AlterationEnum.doubleSharp,

@@ -109,9 +109,6 @@ describe("analyzeInterval", () => {
           quality: "augmented",
           halfsteps: 17,
         });
-      });
-
-      it("analyzes an augmented third down", () => {
         expect(analyzeInterval(C4, AdoubleFlat2)).toEqual({
           direction: "down",
           compound: true,
