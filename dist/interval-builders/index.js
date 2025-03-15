@@ -1,47 +1,67 @@
 import { AugmentedFifth, DiminishedFifth, PerfectFifth } from "./Fifth";
 import { AugmentedFourth, DiminishedFourth, PerfectFourth } from "./Fourth";
 import { AugmentedOctave, DiminishedOctave, PerfectOctave } from "./Octave";
-import { AugmentedSecond, DiminishedSecond, MajorSecond, MinorSecond, } from "./Second";
-import { AugmentedSeventh, DiminishedSeventh, MajorSeventh, MinorSeventh, } from "./Seventh";
-import { AugmentedSixth, DiminishedSixth, MajorSixth, MinorSixth, } from "./Sixth";
-import { AugmentedThird, DiminishedThird, MajorThird, MinorThird, } from "./Third";
+import {
+  AugmentedSecond,
+  DiminishedSecond,
+  MajorSecond,
+  MinorSecond,
+} from "./Second";
+import {
+  AugmentedSeventh,
+  DiminishedSeventh,
+  MajorSeventh,
+  MinorSeventh,
+} from "./Seventh";
+import {
+  AugmentedSixth,
+  DiminishedSixth,
+  MajorSixth,
+  MinorSixth,
+} from "./Sixth";
+import {
+  AugmentedThird,
+  DiminishedThird,
+  MajorThird,
+  MinorThird,
+} from "./Third";
 import { AugmentedUnison, DiminishedUnison, PerfectUnison } from "./Unison";
 export default [
-    // Unison
-    { callable: DiminishedUnison, name: "DiminishedUnison" },
-    { callable: PerfectUnison, name: "PerfectUnison" },
-    { callable: AugmentedUnison, name: "AugmentedUnison" },
-    // second
-    { callable: DiminishedSecond, name: "DiminishedSecond" },
-    { callable: MinorSecond, name: "MinorSecond" },
-    { callable: MajorSecond, name: "MajorSecond" },
-    { callable: AugmentedSecond, name: "AugmentedSecond" },
-    // third
-    { callable: DiminishedThird, name: "DiminishedThird" },
-    { callable: MinorThird, name: "MinorThird" },
-    { callable: MajorThird, name: "MajorThird" },
-    { callable: AugmentedThird, name: "AugmentedThird" },
-    // forth
-    { callable: AugmentedFourth, name: "AugmentedFourth" },
-    { callable: PerfectFourth, name: "PerfectFourth" },
-    { callable: DiminishedFourth, name: "DiminishedFourth" },
-    // fifth
-    { callable: AugmentedFifth, name: "AugmentedFifth" },
-    { callable: PerfectFifth, name: "PerfectFifth" },
-    { callable: DiminishedFifth, name: "DiminishedFifth" },
-    // sixth
-    { callable: DiminishedSixth, name: "DiminishedSixth" },
-    { callable: MinorSixth, name: "MinorSixth" },
-    { callable: MajorSixth, name: "MajorSixth" },
-    { callable: AugmentedSixth, name: "AugmentedSixth" },
-    // seventh
-    { callable: DiminishedSeventh, name: "DiminishedSeventh" },
-    { callable: MinorSeventh, name: "MinorSeventh" },
-    { callable: MajorSeventh, name: "MajorSeventh" },
-    { callable: AugmentedSeventh, name: "AugmentedSeventh" },
-    // octave
-    { callable: AugmentedOctave, name: "AugmentedOctave" },
-    { callable: PerfectOctave, name: "PerfectOctave" },
-    { callable: DiminishedOctave, name: "DiminishedOctave" },
+  // Unison
+  { callable: DiminishedUnison, name: "DiminishedUnison" },
+  { callable: PerfectUnison, name: "PerfectUnison" },
+  { callable: AugmentedUnison, name: "AugmentedUnison" },
+  // second
+  { callable: DiminishedSecond, name: "DiminishedSecond" },
+  { callable: MinorSecond, name: "MinorSecond" },
+  { callable: MajorSecond, name: "MajorSecond" },
+  { callable: AugmentedSecond, name: "AugmentedSecond" },
+  // third
+  { callable: DiminishedThird, name: "DiminishedThird" },
+  { callable: MinorThird, name: "MinorThird" },
+  { callable: MajorThird, name: "MajorThird" },
+  { callable: AugmentedThird, name: "AugmentedThird" },
+  // forth
+  { callable: AugmentedFourth, name: "AugmentedFourth" },
+  { callable: PerfectFourth, name: "PerfectFourth" },
+  { callable: DiminishedFourth, name: "DiminishedFourth" },
+  // fifth
+  { callable: AugmentedFifth, name: "AugmentedFifth" },
+  { callable: PerfectFifth, name: "PerfectFifth" },
+  { callable: DiminishedFifth, name: "DiminishedFifth" },
+  // sixth
+  { callable: DiminishedSixth, name: "DiminishedSixth" },
+  { callable: MinorSixth, name: "MinorSixth" },
+  { callable: MajorSixth, name: "MajorSixth" },
+  { callable: AugmentedSixth, name: "AugmentedSixth" },
+  // seventh
+  { callable: DiminishedSeventh, name: "DiminishedSeventh" },
+  { callable: MinorSeventh, name: "MinorSeventh" },
+  { callable: MajorSeventh, name: "MajorSeventh" },
+  { callable: AugmentedSeventh, name: "AugmentedSeventh" },
+  // octave
+  { callable: AugmentedOctave, name: "AugmentedOctave" },
+  { callable: PerfectOctave, name: "PerfectOctave" },
+  { callable: DiminishedOctave, name: "DiminishedOctave" },
 ];
 //# sourceMappingURL=index.js.map

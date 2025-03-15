@@ -6,13 +6,13 @@ export default defineConfig({
   build: {
     lib: {
       entry: "src/index.ts", // Define your entry point
-      name: 'MusicUtilities',
+      name: "MusicUtilities",
       formats: ["es", "cjs"],
-      fileName: (format) => `index.${format}.js`
+      fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
       external: [], // List dependencies here if needed
-    }
+    },
   },
   plugins: [tsconfigPaths()], // Enable path alias resolution
   resolve: {
