@@ -16,25 +16,43 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '22'
+        node-version-file: '.nvmrc'  # Use Node.js version from .nvmrc file
+
+    - name: Cache npm dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
 
     - name: Install dependencies
       run: npm install
 
+    - name: Run lint
+      run: npm run lint  # Ensure you have a lint script in your package.json
+
     - name: Run tests
-      run: npm run test
+      run: npm test
 
-    - name: Build project
-      run: npm run build  # Ensure this command correctly builds your project into the dist folder
+    - name: Run build
+      run: npm run build  # Ensure this command correctly builds your project
 
-    - name: Commit dist folder
+    - name: Deploy
+      run: npm run deploy  # Use a deploy script or GitHub Pages for deployment
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Clean up
       run: |
         git config --global user.name "${GITHUB_ACTOR}"
         git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
         git add dist/
         git commit -m 'build'
         git push origin main  # Pushes the changes to the main branch (adjust the branch as needed)
-
+      if: success()
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+  matrix:
+    node-version: [14, 16, 18]  # Test against multiple Node.js versions
