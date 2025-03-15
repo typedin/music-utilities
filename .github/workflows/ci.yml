@@ -54,6 +54,5 @@ jobs:
         git add dist/
         git commit -m 'build'
         git push origin main  # Pushes the changes to the main branch (adjust the branch as needed)
-      if: success()
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
