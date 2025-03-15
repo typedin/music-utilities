@@ -26,4 +26,10 @@ export default [
   //   },
   // },
   eslintConfigPrettier, // Disable conflicting ESLint rules
+  {
+    rules: {
+      "@typescript-eslint/no-require-imports": "off", // Disable no-require-imports rule
+      "@typescript-eslint/no-explicit-any": "off", // Disable no-explicit-any rule
+    }
+  }
 ];
