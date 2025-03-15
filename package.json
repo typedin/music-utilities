@@ -1,15 +1,17 @@
 {
   "name": "@typedin/music-utilities",
   "version": "1.0.0",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
   "types": "dist/types/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "default": "./dist/index.mjs"
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js"
     }
+  },
+  "./types": {
+    "import": "./dist/types/index.d.ts"
   },
   "scripts": {
     "prebuild": "rimraf dist",
