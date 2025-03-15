@@ -8,10 +8,6 @@ package-lock.json
 pnpm-lock.yaml
 yarn.lock
 
-# Build artifacts
-dist/
-*.tsbuildinfo
-
 # Temporary files
 .temp/
 .tmp/
@@ -23,7 +19,6 @@ dist/
 coverage/
 *.lcov
 
-
 # Vitest cache
 .vitest/
 
@@ -31,6 +26,8 @@ coverage/
 logs/
 *.log
 
+# Build artifacts
+*.tsbuildinfo
 vitest.config.d.ts
 vitest.config.js.map
 vitest.config.js
