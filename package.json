@@ -4,15 +4,16 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "prebuild": "rm -rf dist",
     "build": "tsc",
     "check-types": "tsc --noEmit",
     "format": "prettier --write \"src/**/*.{js,ts,tsx,jsx,json,md}\"",
     "lint": "eslint . --ext .ts",
     "prepublishOnly": "npm run build",
-    "test": "vitest",
-    "test:vitest": "vitest",
-    "test:watch": "vitest --watch",
-    "test:coverage": "vitest --coverage"
+    "test": "vitest --config tsconfig.json",
+    "test:vitest": "vitest --config tsconfig.json",
+    "test:watch": "vitest --watch --config tsconfig.json",
+    "test:coverage": "vitest --coverage --config tsconfig.json"
   },
   "keywords": [
     "music",

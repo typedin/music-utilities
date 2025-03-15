@@ -31,3 +31,6 @@ coverage/
 logs/
 *.log
 
+vitest.config.d.ts
+vitest.config.js.map
+vitest.config.js

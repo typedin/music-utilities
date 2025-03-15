@@ -1,19 +1,24 @@
 {
   "compilerOptions": {
-    "module": "commonjs", 
-    "forceConsistentCasingInFileNames": true, 
-    "strict": true, 
-    "noImplicitAny": false,
-    "skipLibCheck": true, 
-    "outDir": "dist",
-    "declaration": true,
-    "target": "ESNext",
-    "sourceMap": true,
     "baseUrl": ".",
-    "types": ["vitest/globals"],
+    "declaration": true,
+    "declarationDir": "dist",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "commonjs",
+    "moduleResolution": "Node",
+    "noImplicitAny": false,
+    "outDir": "dist",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "rootDir": "src",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "ESNext",
+    "types": ["vitest/globals"]
   },
-  "include": ["src", "vitest.config.ts", "src/types"]
+  "include": ["src", "src/types"],  // Only source files and types
+  "exclude": ["dist", "node_modules", "src/__tests__"]
 }
