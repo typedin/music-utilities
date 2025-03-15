@@ -1,0 +1,32 @@
+name: CI Workflow
+
+on:
+  push:
+    branches:
+      - main  # Trigger the workflow on pushes to the 'main' branch
+  pull_request:
+    branches:
+      - main  # Trigger the workflow on pull requests to the 'main' branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '22'  # Specify the Node.js version you want to use
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run tests
+      run: npm run test  # Or use 'npx vitest' depending on your script setup
+
+    - name: Build project
+      run: npm run build  # Ensure this command builds your project, e.g., using Vite or tsc
+

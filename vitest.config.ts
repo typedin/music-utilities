@@ -7,6 +7,11 @@ export default defineConfig({
     globals: true, // Enable global test functions like describe, test, expect
     environment: "node", // Set the environment to Node.js
     includeSource: ["src/**/*.ts"],
+    coverage: {
+      reporter: [
+        "html", "json", "text"
+      ]
+    }
   },
   plugins: [tsconfigPaths()], // Enable path alias resolution
   resolve: {
