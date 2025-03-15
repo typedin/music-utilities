@@ -6,6 +6,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: "src/index.ts", // Define your entry point
+      name: 'MusicUtilities',
       formats: ["es", "cjs"],
       fileName: (format) => `index.${format}.js`
     },

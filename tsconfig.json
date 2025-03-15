@@ -2,10 +2,10 @@
   "compilerOptions": {
     "baseUrl": ".",
     "declaration": true,
-    "declarationDir": "dist",
+    "declarationDir": "dist/types",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "commonjs",
+    "module": "NodeNext",
     "moduleResolution": "Node",
     "noImplicitAny": false,
     "outDir": "dist",
@@ -13,6 +13,7 @@
       "@/*": ["src/*"],
       "@/types": ["src/types/*"]
     },
+    "resolveJsonModule": true,
     "rootDir": "src",
     "skipLibCheck": true,
     "sourceMap": true,
