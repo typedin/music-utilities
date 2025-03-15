@@ -1,4 +1,4 @@
-import { IMusicalString, IScaleDegree, Note } from "@/types";
+import { IMusicalString, IScaleDegree, Note } from "../types";
 import { getNextNoteOnScale } from "../helpers";
 import { beginOn } from "../scale-builders/beginOn";
 import { spanOver } from "../scale-builders/spanOver";

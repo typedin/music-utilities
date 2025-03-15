@@ -2,7 +2,7 @@ import { getName } from "./getName";
 import { getNoteOctave } from "./getNoteOctave";
 import type { AlterationEnum, DiatonicNoteEnum } from "../constants";
 import { getNextAlteration, getPreviousAlteration } from "../helpers";
-import { Note, Semitones } from "@/types";
+import { Note, Semitones } from "../types";
 
 function getAlterationForDiminishedFifth(
   note: Note,

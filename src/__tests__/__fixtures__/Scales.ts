@@ -1,4 +1,4 @@
-import { IScaleDegree } from "@/types";
+import { IScaleDegree } from "../types";
 import { AlterationEnum, DiatonicNoteEnum } from "../../constants";
 
 export const C_MAJOR_SCALE: IScaleDegree[] = [

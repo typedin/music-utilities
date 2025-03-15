@@ -26,7 +26,7 @@ import {
 } from "../../interval-builders/Second";
 
 import { A2, AdoubleFlat2, G2, GFlat2 } from "../tests-helpers";
-import { Note } from "@/types";
+import { Note } from "../types";
 
 describe("Second", () => {
   describe("Diminished", () => {

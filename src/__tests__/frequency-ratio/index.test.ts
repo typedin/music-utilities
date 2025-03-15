@@ -1,4 +1,4 @@
-import { IReference } from "@/types";
+import { IReference } from "../types";
 import { frequencyAsPercentage } from "../../frequency-ratio/index";
 import { A4, A5, Eb5 } from "../tests-helpers";
 

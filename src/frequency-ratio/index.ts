@@ -1,5 +1,5 @@
 import calculateFrequency from "../frequency-calculator";
-import { IReference, Note } from "@/types";
+import { IReference, Note } from "../types";
 
 type interval = {
   direction: string;

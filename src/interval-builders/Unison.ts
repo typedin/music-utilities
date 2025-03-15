@@ -1,4 +1,4 @@
-import { Note, Semitones } from "@/types";
+import { Note, Semitones } from "../types";
 import {
   getAlterationForAugmentedInterval,
   getAlterationForDiminishedInterval,

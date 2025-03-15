@@ -5,7 +5,7 @@ import {
   INotePosition,
   IReference,
   IScaleDegree,
-} from "@/types";
+} from "../types";
 
 export default function createNotePosition(
   scaleDegree: IScaleDegree,

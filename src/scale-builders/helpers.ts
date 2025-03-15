@@ -1,4 +1,4 @@
-import { IntervalBuilder, Note } from "@/types";
+import { IntervalBuilder, Note } from "../types";
 
 export type DegreeBuilder = {
   function: string;

@@ -1,4 +1,4 @@
-import { IScaleDegree, Note } from "@/types";
+import { IScaleDegree, Note } from "../types";
 
 export function getNoteOctave(
   note: Note,

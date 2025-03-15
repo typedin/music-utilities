@@ -1,4 +1,4 @@
-import { Note, Semitones } from "@/types";
+import { Note, Semitones } from "../types";
 import {
   getAlterationForAugmentedInterval,
   getAlterationForDiminishedInterval,
@@ -6,7 +6,7 @@ import {
 } from "./getAlterationForPerfectInterval";
 import { getName } from "./getName";
 import { getNoteOctave } from "./getNoteOctave";
-import { DiatonicNoteEnum } from "@/constants";
+import { DiatonicNoteEnum } from "../constants";
 
 const specialCases = {
   up: [] as Array<DiatonicNoteEnum>,
