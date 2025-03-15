@@ -49,8 +49,8 @@ jobs:
 
     - name: Clean up
       run: |
-        git config --global user.name "${antoine}"
-        git config --global user.email "${antoine}@typedin.dev"
+        git config --global user.name "antoine"
+        git config --global user.email "antoine@typedin.dev"
         git add dist/
         git commit -m 'build'
         git push origin main  # Pushes the changes to the main branch (adjust the branch as needed)
