@@ -50,11 +50,11 @@ export interface ReferenceUsedInStringStore extends Note {
 export interface Alteration {
   name: string;
   visual:
-  | AlterationEnum.flat
-  | AlterationEnum.sharp
-  | AlterationEnum.natural
-  | AlterationEnum.doubleFlat
-  | AlterationEnum.doubleSharp;
+    | AlterationEnum.flat
+    | AlterationEnum.sharp
+    | AlterationEnum.natural
+    | AlterationEnum.doubleFlat
+    | AlterationEnum.doubleSharp;
 }
 
 export type IntervalBuilder = (
