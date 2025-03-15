@@ -30,3 +30,10 @@ jobs:
     - name: Build project
       run: npm run build  # Ensure this command builds your project, e.g., using Vite or tsc
 
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: dist/**  # Replace with your build folder and files you want to include
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
