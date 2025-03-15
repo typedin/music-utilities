@@ -1,19 +1,19 @@
 {
   "compilerOptions": {
-    "module": "commonjs" /* Specify what module code is generated. */,
-    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
-    "strict": true /* Enable all strict type-checking options. */,
-    "noImplicitAny": false // Allow implicit `any` types
-    "skipLibCheck": true /* Skip type checking all .d.ts files. */,
+    "module": "commonjs", 
+    "forceConsistentCasingInFileNames": true, 
+    "strict": true, 
+    "noImplicitAny": false,
+    "skipLibCheck": true, 
     "outDir": "dist",
     "declaration": true,
     "target": "ESNext",
     "sourceMap": true,
     "baseUrl": ".",
-    "types": ["vitest/globals", "src/types"],
+    "types": ["vitest/globals"],
     "paths": {
       "@/*": ["src/*"]
     }
   },
-  "include": ["src", "vitest.config.ts"]
+  "include": ["src", "vitest.config.ts", "src/types"]
 }

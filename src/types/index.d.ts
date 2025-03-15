@@ -11,6 +11,14 @@ export interface IReference extends Note {
   frequency: number;
 }
 
+export interface INotePosition extends Note {
+  degree: number;
+  frequency: number;
+  function: string;
+  order: number; // 1 indexed
+  position: number;
+}
+
 export interface Interval {
   direction?: "up" | "down";
   compound: boolean;
@@ -42,11 +50,11 @@ export interface ReferenceUsedInStringStore extends Note {
 export interface Alteration {
   name: string;
   visual:
-    | AlterationEnum.flat
-    | AlterationEnum.sharp
-    | AlterationEnum.natural
-    | AlterationEnum.doubleFlat
-    | AlterationEnum.doubleSharp;
+  | AlterationEnum.flat
+  | AlterationEnum.sharp
+  | AlterationEnum.natural
+  | AlterationEnum.doubleFlat
+  | AlterationEnum.doubleSharp;
 }
 
 export type IntervalBuilder = (

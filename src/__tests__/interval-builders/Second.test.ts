@@ -26,6 +26,7 @@ import {
 } from "../../interval-builders/Second";
 
 import { A2, AdoubleFlat2, G2, GFlat2 } from "../tests-helpers";
+import { Note } from "@/types";
 
 describe("Second", () => {
   describe("Diminished", () => {
@@ -135,19 +136,19 @@ describe("Second", () => {
     describe("down", () => {
       it("gets the major second for natural note names", () => {
         majorSecondNatural.forEach(({ input, output }) => {
-          expect(MajorSecond(output, "down")).toEqual(input);
+          expect(MajorSecond(output as Note, "down")).toEqual(input);
         });
       });
 
       it("gets the major second for sharp note names", () => {
         majorSecondSharps.forEach(({ input, output }) => {
-          expect(MajorSecond(output, "down")).toEqual(input);
+          expect(MajorSecond(output as Note, "down")).toEqual(input);
         });
       });
 
       it("gets the major second for flat note names", () => {
         majorSecondFlats.forEach(({ input, output }) => {
-          expect(MajorSecond(output, "down")).toEqual(input);
+          expect(MajorSecond(output as Note, "down")).toEqual(input);
         });
       });
     });

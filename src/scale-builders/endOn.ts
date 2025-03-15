@@ -1,3 +1,4 @@
+import { IScaleDegree, Note } from "@/types";
 import { isInScale, isNoteHigher } from "../helpers";
 
 export function endOn(

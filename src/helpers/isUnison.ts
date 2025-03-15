@@ -1,5 +1,6 @@
 import { DiatonicNoteEnum } from "../constants";
 import { getNextAlteration, getPreviousAlteration, indexOfNote } from ".";
+import { Note } from "@/types";
 
 function areNotesTheSame(firstNote: Note, secondNote: Note): boolean {
   return (
@@ -33,9 +34,9 @@ function areNotesSpecialSecondsDown(
 function areNotesDiminishedSeconds(firstNote: Note, secondNote: Note): boolean {
   return (
     getNextAlteration(secondNote.alteration) ==
-      getPreviousAlteration(firstNote.alteration) ||
+    getPreviousAlteration(firstNote.alteration) ||
     getPreviousAlteration(secondNote.alteration) ==
-      getNextAlteration(firstNote.alteration)
+    getNextAlteration(firstNote.alteration)
   );
 }
 

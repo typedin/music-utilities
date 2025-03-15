@@ -1,6 +1,6 @@
 import type { DiatonicNoteEnum } from "@/constants";
 import { getNoteFromInterval } from "../helpers";
-import type { Semitones } from "./Semitones";
+import { Note, Semitones } from "@/types";
 
 export function getName(
   note: Note,

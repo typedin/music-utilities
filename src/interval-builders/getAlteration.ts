@@ -1,3 +1,4 @@
+import { Note } from "@/types";
 import type { AlterationEnum } from "../constants";
 import { getNextAlteration, getPreviousAlteration } from "../helpers";
 

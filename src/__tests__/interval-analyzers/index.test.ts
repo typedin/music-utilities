@@ -13,6 +13,7 @@ import {
   GFlat2,
 } from "../tests-helpers";
 import { G_MAJOR_SCALE } from "../__fixtures__/Scales";
+import { IMusicalString } from "@/types";
 
 describe("analyzeInterval", () => {
   describe("non compound", () => {

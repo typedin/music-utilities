@@ -1,3 +1,4 @@
+import { Note, Semitones } from "@/types";
 import {
   getAlterationForAugmentedInterval,
   getAlterationForDiminishedInterval,
@@ -5,7 +6,6 @@ import {
 } from "./getAlterationForPerfectInterval";
 import { getName } from "./getName";
 import { getNoteOctave } from "./getNoteOctave";
-import type { Semitones } from "./Semitones";
 
 const specialCases = {
   up: [],

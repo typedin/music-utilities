@@ -1,3 +1,4 @@
+import { IScale } from "@/types";
 import analyzeInterval from "../interval-analyzers/index";
 
 const all_scales = [

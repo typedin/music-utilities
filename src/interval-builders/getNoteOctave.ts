@@ -1,3 +1,5 @@
+import { IScaleDegree, Note } from "@/types";
+
 export function getNoteOctave(
   note: Note,
   notesThatMakeOctaveChange: IScaleDegree["name"][],
