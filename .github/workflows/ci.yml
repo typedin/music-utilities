@@ -45,15 +45,15 @@ jobs:
     - name: Deploy
       run: npm run deploy  # Use a deploy script or GitHub Pages for deployment
       env:
-        GITHUB_TOKEN: ${{ secrets.MusicUtilitiesToken }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Clean up
       run: |
-        git config --global user.name "${antoine}"
-        git config --global user.email "${antoine}@typedin.dev"
+        git config --global user.name "${GITHUB_ACTOR}"
+        git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
         git add dist/
         git commit -m 'build'
         git push origin main  # Pushes the changes to the main branch (adjust the branch as needed)
       if: success()
       env:
-        GITHUB_TOKEN: ${{ secrets.MusicUtilitiesToken }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
