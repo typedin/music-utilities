@@ -10,4 +10,3 @@ export * from "./position-builders";
 export * from "./scale-analyzers";
 export * from "./scale-builders";
 export * from "./transposition";
-export * from "./types";
