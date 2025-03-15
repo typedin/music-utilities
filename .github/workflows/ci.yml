@@ -1,9 +1,10 @@
-name: CI Workflow
+name: Build and Deploy
 
 on:
   push:
-    tags:
-      - 'v*'  # Trigger the workflow for the tags starting with 'v'
+    branches:
+      - main  # or your preferred branch, e.g., 'master', 'dev', etc.
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,21 +16,25 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '22'  # Specify the Node.js version you want to use
+        node-version: '22'
 
     - name: Install dependencies
       run: npm install
 
     - name: Run tests
-      run: npm run test  # Or use 'npx vitest' depending on your script setup
+      run: npm run test
 
     - name: Build project
-      run: npm run build  # Ensure this command builds your project, e.g., using Vite or tsc
+      run: npm run build  # Ensure this command correctly builds your project into the dist folder
 
-    - name: Create Release
-      uses: softprops/action-gh-release@v1
-      with:
-        files: dist/**  # Replace with your build folder and files you want to include
+    - name: Commit dist folder
+      run: |
+        git config --global user.name "${GITHUB_ACTOR}"
+        git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+        git add dist/
+        git commit -m 'build'
+        git push origin main  # Pushes the changes to the main branch (adjust the branch as needed)
+
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
