@@ -8,6 +8,7 @@ export enum FingerEnum {
   fourth = "4",
   fifth = "5",
 }
+
 export enum AlterationEnum {
   doubleFlat = "𝄫",
   flat = "♭",
@@ -35,6 +36,7 @@ export enum ModeEnum {
   M = "Major",
   m = "Minor",
 }
+
 export const ScaleFunction = [
   "tonic",
   "supertonic",
