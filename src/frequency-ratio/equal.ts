@@ -24,7 +24,7 @@ function recursion(value: number, semitones: number): any {
   return recursion((value * 94.39) / 100, semitones - 1);
 }
 
-export default function equal(reference: any): {
+export function equal(reference: any): {
   P1: { up: number };
   m2: { up: number };
   M2: { up: number };

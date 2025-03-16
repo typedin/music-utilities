@@ -11,7 +11,7 @@ function perfectForthDown(frequency: number): number {
   return (frequency * 3) / 4;
 }
 
-export default function Pythagorean(reference: number): {
+export function pythagorean(reference: number): {
   M2: { up: number };
   M3: { up: number };
   P4: { up: number };

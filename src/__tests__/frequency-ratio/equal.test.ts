@@ -1,5 +1,5 @@
 import { frequencyRatio } from "../../frequency-ratio/index.js";
-import equal from "../../frequency-ratio/equal.js";
+import { equal } from "../../frequency-ratio/equal.js";
 
 const REFERENCE_IN_FREQUENCY = {
   type: "frequency",

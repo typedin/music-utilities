@@ -2,12 +2,12 @@ import { AlterationEnum, DiatonicNoteEnum } from "../constants.js";
 import type { IScaleDegree, Note } from "../types/index.js";
 import { isUnison } from "./isUnison.js";
 
-export function indexOfNote(note: Note): number {
-  return Object.values(DiatonicNoteEnum).indexOf(note.name) % 12;
-}
-
 function indexOfAlteration(note: Note): number {
   return Object.values(AlterationEnum).indexOf(note.alteration);
+}
+
+export function indexOfNote(note: Note): number {
+  return Object.values(DiatonicNoteEnum).indexOf(note.name) % 12;
 }
 
 export function isNoteHigher(reference: Note, expectedHigherNote: Note): boolean {

@@ -7,8 +7,7 @@ type BuilderOptions = {
   isRabbath?: boolean;
 };
 
-// TODO rename this to a singular
-export default function PositionBuilders(
+export function positionBuilder(
   scale: IScaleDegree[],
   musicalString: IMusicalString,
   options?: BuilderOptions,

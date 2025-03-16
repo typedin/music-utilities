@@ -1,12 +1,14 @@
-export * from "./cycle-of-fifths/index.js";
-export * from "./frequency-calculator/index.js";
-export * from "./frequency-ratio/index.js";
-export * from "./helpers/index.js";
-export * from "./interval-analyzers/index.js";
-export * from "./interval-builders/index.js";
-export * from "./keys/index.js";
-export * from "./note-position/index.js";
-export * from "./position-builders/index.js";
-export * from "./scale-analyzers/index.js";
-export * from "./scale-builders/index.js";
-export * from "./transposition/index.js";
+export { cycleOfFifths } from "./cycle-of-fifths/index.js";
+export { calculateFrequency } from "./frequency-calculator/index.js";
+export { frequencyRatio, frequencyAsPercentage } from "./frequency-ratio/index.js";
+export { equal } from "./frequency-ratio/equal.js"
+export { pythagorean } from "./frequency-ratio/pythagorean.js"
+export { indexOfNote, asNote, getFirstPossibleNoteInScale, buildNoteName, parseNoteName, isInScale, getNextAlteration, getPreviousAlteration, getNextNoteOnScale, getNoteFromInterval, isNoteLower, isNoteHigher } from "./helpers/index.js";
+export { intervalAnalyzer } from "./interval-analyzers/index.js";
+export { intervalBuilders } from "./interval-builders/index.js";
+export { getRelativeKey } from "./keys/index.js";
+export { createNotePosition } from "./note-position/index.js";
+export { positionBuilder } from "./position-builders/index.js";
+export { scaleAnalyser } from "./scale-analyzers/index.js";
+export { ScaleBuilder, beginOn, endOn, spanOver } from "./scale-builders/index.js";
+export { transpose } from "./transposition/index.js";

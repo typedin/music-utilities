@@ -1,4 +1,4 @@
-import pythagorean from "../../frequency-ratio/pythagorean.js";
+import { pythagorean } from "../../frequency-ratio/pythagorean.js";
 import { frequencyRatio } from "../../frequency-ratio/index.js";
 
 const REFERENCE = 261;

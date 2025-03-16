@@ -8,19 +8,19 @@ type ITonality = {
   mode: ModeEnum;
 };
 
-export default function getRelativeKey(aTonality: ITonality): ITonality {
+export function getRelativeKey(aTonality: ITonality): ITonality {
   const { name, alteration } =
     aTonality.mode == ModeEnum.M
       ? MajorSixth({
-          name: aTonality.tonality,
-          alteration: aTonality.alteration,
-          octave: 1,
-        })
+        name: aTonality.tonality,
+        alteration: aTonality.alteration,
+        octave: 1,
+      })
       : MinorThird({
-          name: aTonality.tonality,
-          alteration: aTonality.alteration,
-          octave: 1,
-        });
+        name: aTonality.tonality,
+        alteration: aTonality.alteration,
+        octave: 1,
+      });
 
   return {
     tonality: name,
