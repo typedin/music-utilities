@@ -10,10 +10,7 @@ function indexOfAlteration(note: Note): number {
   return Object.values(AlterationEnum).indexOf(note.alteration);
 }
 
-export function isNoteHigher(
-  reference: Note,
-  expectedHigherNote: Note,
-): boolean {
+export function isNoteHigher(reference: Note, expectedHigherNote: Note): boolean {
   if (isUnison(reference, expectedHigherNote)) {
     return false;
   }
@@ -59,10 +56,7 @@ export function isNoteLower(reference: Note, expectedLowerNote: Note): boolean {
   return indexOfNote(reference) > indexOfNote(expectedLowerNote);
 }
 
-export function getNoteFromInterval(
-  note: Note,
-  interval: number,
-): DiatonicNoteEnum {
+export function getNoteFromInterval(note: Note, interval: number): DiatonicNoteEnum {
   const index = (note: Note, offset: number): number =>
     (Object.values(DiatonicNoteEnum).indexOf(note.name) + offset) % 12;
 
@@ -83,28 +77,17 @@ export function getNextNoteOnScale(scale: IScaleDegree[], note: Note) {
 
 export function getPreviousAlteration(needle: AlterationEnum): AlterationEnum {
   return (
-    Object.values(AlterationEnum)[
-    Object.values(AlterationEnum).indexOf(needle) - 1
-    ] || AlterationEnum.natural
+    Object.values(AlterationEnum)[Object.values(AlterationEnum).indexOf(needle) - 1] || AlterationEnum.natural
   );
 }
 
 export function getNextAlteration(needle: AlterationEnum): AlterationEnum {
-  return Object.values(AlterationEnum)[
-    Object.values(AlterationEnum).indexOf(needle) + 1
-  ];
+  return Object.values(AlterationEnum)[Object.values(AlterationEnum).indexOf(needle) + 1];
 }
 
-export function isInScale(
-  haystack: Array<IScaleDegree>,
-  needle: Note,
-): boolean {
+export function isInScale(haystack: Array<IScaleDegree>, needle: Note): boolean {
   const index = haystack.findIndex((e) => {
-    return (
-      e.octave == needle.octave &&
-      e.name == needle.name &&
-      e.alteration == needle.alteration
-    );
+    return e.octave == needle.octave && e.name == needle.name && e.alteration == needle.alteration;
   });
   return index > -1;
 }
@@ -121,10 +104,7 @@ export function buildNoteName(note: Note): string {
   return `${note.name}${note.alteration}${note.octave}`;
 }
 
-export function getFirstPossibleNoteInScale(
-  scale: IScaleDegree[],
-  note: Note,
-): Note {
+export function getFirstPossibleNoteInScale(scale: IScaleDegree[], note: Note): Note {
   if (
     isInScale(scale, { ...note, octave: scale[0].octave }) ||
     isInScale(scale, { ...note, octave: scale[0].octave + 1 })

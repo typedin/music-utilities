@@ -25,9 +25,7 @@ export default function Pythagorean(reference: number): {
   };
 
   const M3 = {
-    up: perfectForthDown(
-      perfectFifthUp(perfectForthDown(perfectFifthUp(reference))),
-    ),
+    up: perfectForthDown(perfectFifthUp(perfectForthDown(perfectFifthUp(reference)))),
   };
 
   const P4 = {
@@ -43,11 +41,7 @@ export default function Pythagorean(reference: number): {
   };
 
   const M7 = {
-    up: perfectFifthUp(
-      perfectForthDown(
-        perfectFifthUp(perfectForthDown(perfectFifthUp(reference))),
-      ),
-    ),
+    up: perfectFifthUp(perfectForthDown(perfectFifthUp(perfectForthDown(perfectFifthUp(reference))))),
   };
 
   const P8 = {

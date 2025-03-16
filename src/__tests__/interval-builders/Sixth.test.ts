@@ -1,9 +1,4 @@
-import {
-  DiminishedSixth,
-  MajorSixth,
-  MinorSixth,
-  AugmentedSixth,
-} from "../../interval-builders/Sixth";
+import { DiminishedSixth, MajorSixth, MinorSixth, AugmentedSixth } from "../../interval-builders/Sixth";
 import {
   diminishedSixthFlats,
   diminishedSixthNatural,

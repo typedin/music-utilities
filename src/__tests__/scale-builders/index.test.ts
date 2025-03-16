@@ -1,10 +1,7 @@
 import { AlterationEnum, DiatonicNoteEnum } from "../../constants";
 import ScaleBuilder from "../../scale-builders/index";
 import * as Scales from "../__fixtures__/Scales";
-import {
-  majorScaleSchema,
-  naturalHarmonicMinorScaleSchema,
-} from "./__fixtures__/scales-schemas";
+import { majorScaleSchema, naturalHarmonicMinorScaleSchema } from "./__fixtures__/scales-schemas";
 
 describe("ScaleBuilder", () => {
   it("creates a major scale on one octave with the repetition of the tonic by default", () => {

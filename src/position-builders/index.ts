@@ -18,8 +18,8 @@ export default function PositionBuilders(
   };
 
   if (options?.isRabbath) {
-    return spanOver(beginOn(scale, nextPossibleNoteWithStringOctave), 2).filter(
-      (_note, index) => [0, 2, 3, 6, 10, 13].includes(index),
+    return spanOver(beginOn(scale, nextPossibleNoteWithStringOctave), 2).filter((_note, index) =>
+      [0, 2, 3, 6, 10, 13].includes(index),
     );
   }
   return beginOn(scale, nextPossibleNoteWithStringOctave);

@@ -1,9 +1,6 @@
 import type { IScaleDegree } from "../types/index.js";
 
-export function spanOver(
-  scale: IScaleDegree[],
-  numberOfOctaves: number,
-): Array<IScaleDegree> {
+export function spanOver(scale: IScaleDegree[], numberOfOctaves: number): Array<IScaleDegree> {
   const result: IScaleDegree[] = [];
 
   for (let i = 0; i < numberOfOctaves; i++) {

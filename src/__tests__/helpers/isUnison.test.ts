@@ -18,27 +18,15 @@ describe("isUnison", () => {
   });
 
   it("is false for major seconds with E and B", () => {
-    expect(isUnison.isUnison(testsHelpers.FSharp2, testsHelpers.E2)).toBe(
-      false,
-    );
-    expect(isUnison.isUnison(testsHelpers.E2, testsHelpers.FSharp2)).toBe(
-      false,
-    );
-    expect(isUnison.isUnison(testsHelpers.CSharp2, testsHelpers.B2)).toBe(
-      false,
-    );
-    expect(isUnison.isUnison(testsHelpers.B2, testsHelpers.CSharp2)).toBe(
-      false,
-    );
+    expect(isUnison.isUnison(testsHelpers.FSharp2, testsHelpers.E2)).toBe(false);
+    expect(isUnison.isUnison(testsHelpers.E2, testsHelpers.FSharp2)).toBe(false);
+    expect(isUnison.isUnison(testsHelpers.CSharp2, testsHelpers.B2)).toBe(false);
+    expect(isUnison.isUnison(testsHelpers.B2, testsHelpers.CSharp2)).toBe(false);
   });
 
   it("is true for this diminished seconds", () => {
-    expect(isUnison.isUnison(testsHelpers.Csharp4, testsHelpers.Db4)).toBe(
-      true,
-    );
-    expect(isUnison.isUnison(testsHelpers.Db4, testsHelpers.Csharp4)).toBe(
-      true,
-    );
+    expect(isUnison.isUnison(testsHelpers.Csharp4, testsHelpers.Db4)).toBe(true);
+    expect(isUnison.isUnison(testsHelpers.Db4, testsHelpers.Csharp4)).toBe(true);
   });
 
   it("is true for enharmonies", () => {
@@ -57,33 +45,19 @@ describe("isUnison", () => {
   });
 
   test("special case", () => {
-    expect(isUnison.isUnison(testsHelpers.A1, testsHelpers.Asharp1)).toBe(
-      false,
-    );
+    expect(isUnison.isUnison(testsHelpers.A1, testsHelpers.Asharp1)).toBe(false);
     expect(isUnison.isUnison(testsHelpers.Aflat1, testsHelpers.A1)).toBe(false);
-    expect(isUnison.isUnison(testsHelpers.Asharp1, testsHelpers.A1)).toBe(
-      false,
-    );
+    expect(isUnison.isUnison(testsHelpers.Asharp1, testsHelpers.A1)).toBe(false);
     expect(isUnison.isUnison(testsHelpers.A1, testsHelpers.Aflat1)).toBe(false);
-    expect(isUnison.isUnison(testsHelpers.Aflat1, testsHelpers.Aflat1)).toBe(
-      true,
-    );
+    expect(isUnison.isUnison(testsHelpers.Aflat1, testsHelpers.Aflat1)).toBe(true);
   });
 
   describe("in strict mode", () => {
     it("is false for enharmonics", () => {
-      expect(
-        isUnison.isUnison(testsHelpers.Fflat4, testsHelpers.E4, true),
-      ).toBe(false);
-      expect(
-        isUnison.isUnison(testsHelpers.E4, testsHelpers.Fflat4, true),
-      ).toBe(false);
-      expect(isUnison.isUnison(testsHelpers.Cb4, testsHelpers.B3, true)).toBe(
-        false,
-      );
-      expect(isUnison.isUnison(testsHelpers.B3, testsHelpers.Cb4, true)).toBe(
-        false,
-      );
+      expect(isUnison.isUnison(testsHelpers.Fflat4, testsHelpers.E4, true)).toBe(false);
+      expect(isUnison.isUnison(testsHelpers.E4, testsHelpers.Fflat4, true)).toBe(false);
+      expect(isUnison.isUnison(testsHelpers.Cb4, testsHelpers.B3, true)).toBe(false);
+      expect(isUnison.isUnison(testsHelpers.B3, testsHelpers.Cb4, true)).toBe(false);
     });
   });
 });

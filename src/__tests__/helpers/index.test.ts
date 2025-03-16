@@ -6,9 +6,7 @@ import { Eb4_MINOR_MELODIC_ASCENDING } from "../__fixtures__/Scales";
 
 describe("isNoteHigher", () => {
   it("is false for enharmonies", () => {
-    expect(helpers.isNoteHigher(testsHelpers.Fflat4, testsHelpers.E4)).toBe(
-      false,
-    );
+    expect(helpers.isNoteHigher(testsHelpers.Fflat4, testsHelpers.E4)).toBe(false);
     /* expect(helpers.isNoteHigher(testsHelpers.E4, testsHelpers.Fflat4)).toBe( */
     /*     false */
     /* ); */
@@ -40,21 +38,11 @@ describe("isNoteHigher", () => {
   });
 
   test("special case", () => {
-    expect(helpers.isNoteHigher(testsHelpers.A1, testsHelpers.Asharp1)).toBe(
-      true,
-    );
-    expect(helpers.isNoteHigher(testsHelpers.Aflat1, testsHelpers.A1)).toBe(
-      true,
-    );
-    expect(helpers.isNoteHigher(testsHelpers.Asharp1, testsHelpers.A1)).toBe(
-      false,
-    );
-    expect(helpers.isNoteHigher(testsHelpers.A1, testsHelpers.Aflat1)).toBe(
-      false,
-    );
-    expect(helpers.isNoteHigher(testsHelpers.Aflat1, testsHelpers.Aflat1)).toBe(
-      false,
-    );
+    expect(helpers.isNoteHigher(testsHelpers.A1, testsHelpers.Asharp1)).toBe(true);
+    expect(helpers.isNoteHigher(testsHelpers.Aflat1, testsHelpers.A1)).toBe(true);
+    expect(helpers.isNoteHigher(testsHelpers.Asharp1, testsHelpers.A1)).toBe(false);
+    expect(helpers.isNoteHigher(testsHelpers.A1, testsHelpers.Aflat1)).toBe(false);
+    expect(helpers.isNoteHigher(testsHelpers.Aflat1, testsHelpers.Aflat1)).toBe(false);
   });
 });
 
@@ -83,21 +71,11 @@ describe("isNoteLower", () => {
   });
 
   test("special case", () => {
-    expect(helpers.isNoteLower(testsHelpers.Asharp1, testsHelpers.A1)).toBe(
-      true,
-    );
-    expect(helpers.isNoteLower(testsHelpers.A1, testsHelpers.Aflat1)).toBe(
-      true,
-    );
-    expect(helpers.isNoteLower(testsHelpers.A1, testsHelpers.Asharp1)).toBe(
-      false,
-    );
-    expect(helpers.isNoteLower(testsHelpers.Aflat1, testsHelpers.A1)).toBe(
-      false,
-    );
-    expect(helpers.isNoteLower(testsHelpers.Aflat1, testsHelpers.Aflat1)).toBe(
-      false,
-    );
+    expect(helpers.isNoteLower(testsHelpers.Asharp1, testsHelpers.A1)).toBe(true);
+    expect(helpers.isNoteLower(testsHelpers.A1, testsHelpers.Aflat1)).toBe(true);
+    expect(helpers.isNoteLower(testsHelpers.A1, testsHelpers.Asharp1)).toBe(false);
+    expect(helpers.isNoteLower(testsHelpers.Aflat1, testsHelpers.A1)).toBe(false);
+    expect(helpers.isNoteLower(testsHelpers.Aflat1, testsHelpers.Aflat1)).toBe(false);
   });
 });
 
@@ -193,56 +171,42 @@ describe("getFirstPossibleNoteInScale", () => {
   it("gets E flat 4 for E flat 1 on Eb scale", () => {
     const scale = Eb4_MINOR_MELODIC_ASCENDING;
 
-    expect(
-      helpers.getFirstPossibleNoteInScale(scale, testsHelpers.Eb1),
-    ).toEqual(testsHelpers.Eb4);
+    expect(helpers.getFirstPossibleNoteInScale(scale, testsHelpers.Eb1)).toEqual(testsHelpers.Eb4);
   });
 
   it("gets C 4 for C 1 on Eb scale", () => {
     const scale = Eb4_MINOR_MELODIC_ASCENDING;
 
-    expect(helpers.getFirstPossibleNoteInScale(scale, testsHelpers.C1)).toEqual(
-      testsHelpers.C4,
-    );
+    expect(helpers.getFirstPossibleNoteInScale(scale, testsHelpers.C1)).toEqual(testsHelpers.C4);
   });
 
   it("gets B flat for B flat on Eb scale", () => {
     const scale = Eb4_MINOR_MELODIC_ASCENDING;
 
-    expect(
-      helpers.getFirstPossibleNoteInScale(scale, testsHelpers.Bb1),
-    ).toEqual(testsHelpers.Bb4);
+    expect(helpers.getFirstPossibleNoteInScale(scale, testsHelpers.Bb1)).toEqual(testsHelpers.Bb4);
   });
 
   it("gets D for D on Eb scale", () => {
     const scale = Eb4_MINOR_MELODIC_ASCENDING;
 
-    expect(helpers.getFirstPossibleNoteInScale(scale, testsHelpers.D1)).toEqual(
-      testsHelpers.D4,
-    );
+    expect(helpers.getFirstPossibleNoteInScale(scale, testsHelpers.D1)).toEqual(testsHelpers.D4);
   });
 
   it("gets B flat for A on Eb scale", () => {
     const scale = Eb4_MINOR_MELODIC_ASCENDING;
 
-    expect(helpers.getFirstPossibleNoteInScale(scale, testsHelpers.A1)).toEqual(
-      testsHelpers.Bb4,
-    );
+    expect(helpers.getFirstPossibleNoteInScale(scale, testsHelpers.A1)).toEqual(testsHelpers.Bb4);
   });
 
   it("gets C for B on Eb scale", () => {
     const scale = Eb4_MINOR_MELODIC_ASCENDING;
 
-    expect(helpers.getFirstPossibleNoteInScale(scale, testsHelpers.B1)).toEqual(
-      testsHelpers.C5,
-    );
+    expect(helpers.getFirstPossibleNoteInScale(scale, testsHelpers.B1)).toEqual(testsHelpers.C5);
   });
 
   it("gets F for E on Eb scale", () => {
     const scale = Eb4_MINOR_MELODIC_ASCENDING;
 
-    expect(helpers.getFirstPossibleNoteInScale(scale, testsHelpers.E1)).toEqual(
-      testsHelpers.F4,
-    );
+    expect(helpers.getFirstPossibleNoteInScale(scale, testsHelpers.E1)).toEqual(testsHelpers.F4);
   });
 });

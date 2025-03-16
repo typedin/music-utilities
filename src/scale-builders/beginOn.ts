@@ -1,13 +1,8 @@
 import { DiatonicNoteEnum } from "../constants.js";
 import type { IScaleDegree, Note } from "../types/index.js";
 
-export function beginOn(
-  scale: IScaleDegree[],
-  startingNote: Note,
-): Array<IScaleDegree> {
-  const indexOfFirstDegree = scale.findIndex(
-    (degree) => degree.name == startingNote.name,
-  );
+export function beginOn(scale: IScaleDegree[], startingNote: Note): Array<IScaleDegree> {
+  const indexOfFirstDegree = scale.findIndex((degree) => degree.name == startingNote.name);
 
   const firstPart = scale.slice(indexOfFirstDegree, scale.length);
   const secondPart = scale.slice(0, indexOfFirstDegree);

@@ -1,10 +1,7 @@
 import { isInScale, isNoteHigher } from "../helpers/index.js";
 import type { IScaleDegree, Note } from "../types/index.js";
 
-export function endOn(
-  scale: Array<IScaleDegree>,
-  end: Note,
-): Array<IScaleDegree> {
+export function endOn(scale: Array<IScaleDegree>, end: Note): Array<IScaleDegree> {
   const result: IScaleDegree[] = [];
 
   while (!isInScale(scale, end) && scale.length && end) {

@@ -3,9 +3,7 @@ import type { Note } from "../types/index.js";
 import { getNextAlteration, getPreviousAlteration, indexOfNote } from "./index.js";
 
 function areNotesTheSame(firstNote: Note, secondNote: Note): boolean {
-  return (
-    firstNote.octave == secondNote.octave && firstNote.name == secondNote.name
-  );
+  return firstNote.octave == secondNote.octave && firstNote.name == secondNote.name;
 }
 
 function isNoteB(aNote: Note): boolean {
@@ -19,13 +17,9 @@ function areNotesSeconds(firstNote: Note, secondNote: Note): boolean {
   );
 }
 
-function areNotesSpecialSecondsDown(
-  firstNote: Note,
-  secondNote: Note,
-): boolean {
+function areNotesSpecialSecondsDown(firstNote: Note, secondNote: Note): boolean {
   return (
-    ((firstNote.name == DiatonicNoteEnum.F &&
-      secondNote.name == DiatonicNoteEnum.E) ||
+    ((firstNote.name == DiatonicNoteEnum.F && secondNote.name == DiatonicNoteEnum.E) ||
       (firstNote.name == DiatonicNoteEnum.C && isNoteB(secondNote))) &&
     areNotesSeconds(firstNote, secondNote)
   );
@@ -33,43 +27,30 @@ function areNotesSpecialSecondsDown(
 
 function areNotesDiminishedSeconds(firstNote: Note, secondNote: Note): boolean {
   return (
-    getNextAlteration(secondNote.alteration) ==
-    getPreviousAlteration(firstNote.alteration) ||
-    getPreviousAlteration(secondNote.alteration) ==
-    getNextAlteration(firstNote.alteration)
+    getNextAlteration(secondNote.alteration) == getPreviousAlteration(firstNote.alteration) ||
+    getPreviousAlteration(secondNote.alteration) == getNextAlteration(firstNote.alteration)
   );
 }
 
 function areNotesSpecialSecondsUp(firstNote: Note, secondNote: Note): boolean {
   return (
-    ((firstNote.name == DiatonicNoteEnum.E &&
-      secondNote.name == DiatonicNoteEnum.F) ||
+    ((firstNote.name == DiatonicNoteEnum.E && secondNote.name == DiatonicNoteEnum.F) ||
       (isNoteB(firstNote) && secondNote.name == DiatonicNoteEnum.C)) &&
     areNotesSeconds(firstNote, secondNote)
   );
 }
 
 function isComparingCandB(firstNote: Note, secondNote: Note) {
-  if (
-    secondNote.name == DiatonicNoteEnum.C &&
-    firstNote.octave == secondNote.octave - 1
-  ) {
+  if (secondNote.name == DiatonicNoteEnum.C && firstNote.octave == secondNote.octave - 1) {
     return true;
   }
-  if (
-    firstNote.name == DiatonicNoteEnum.C &&
-    firstNote.octave - 1 == secondNote.octave
-  ) {
+  if (firstNote.name == DiatonicNoteEnum.C && firstNote.octave - 1 == secondNote.octave) {
     return true;
   }
   return false;
 }
 
-export function isUnison(
-  firstNote: Note,
-  secondNote: Note,
-  strict: boolean = false,
-): boolean {
+export function isUnison(firstNote: Note, secondNote: Note, strict: boolean = false): boolean {
   if (strict && !areNotesTheSame(firstNote, secondNote)) {
     return false;
   }

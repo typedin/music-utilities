@@ -75,9 +75,7 @@ describe("TraditionalBuilder", () => {
         frequency: 98.0,
       };
       test("has 6 positions", () => {
-        expect(
-          PositionBuilder(scale, firstString, { isRabbath: true }).length,
-        ).toEqual(6);
+        expect(PositionBuilder(scale, firstString, { isRabbath: true }).length).toEqual(6);
       });
 
       test("open string is omitted", () => {

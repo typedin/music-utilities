@@ -6,11 +6,7 @@ type interval = {
   name: string;
 };
 
-export default function frequencyRatio(
-  frequency: any,
-  interval: interval,
-  temperament: any,
-): number {
+export default function frequencyRatio(frequency: any, interval: interval, temperament: any): number {
   return temperament(frequency)[interval.name][interval.direction];
 }
 
@@ -24,14 +20,9 @@ function toAcceptablePercentage(aPercentage: number): number {
 /*
  * @see: https://stackoverflow.com/questions/11832914/how-to-round-to-at-most-2-decimal-places-if-necessary
  */
-export function frequencyAsPercentage(
-  reference: IReference,
-  { from, to }: { from: Note; to: Note },
-): number {
+export function frequencyAsPercentage(reference: IReference, { from, to }: { from: Note; to: Note }): number {
   const fromFrequency = calculateFrequency(reference, from);
   const toFrequency = calculateFrequency(reference, to);
 
-  return Math.round(
-    toAcceptablePercentage(percentage(fromFrequency, toFrequency)),
-  );
+  return Math.round(toAcceptablePercentage(percentage(fromFrequency, toFrequency)));
 }

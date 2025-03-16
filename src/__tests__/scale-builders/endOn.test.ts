@@ -88,8 +88,6 @@ describe("endOn", () => {
 
     expect(result.at(result.length - 1)?.name).toEqual(upperLimit.name);
     expect(result.at(result.length - 1)?.octave).toEqual(upperLimit.octave);
-    expect(result.at(result.length - 1)?.alteration).toEqual(
-      upperLimit.alteration,
-    );
+    expect(result.at(result.length - 1)?.alteration).toEqual(upperLimit.alteration);
   });
 });

@@ -1,6 +1,11 @@
 import type { DiatonicNoteEnum } from "../constants.js";
 import type { Note, Semitones } from "../types/index.js";
-import { getAlterationForAugmentedInterval, getAlterationForDiminishedInterval, getAlterationForMajorInterval, getAlterationForMinorInterval } from "./getAlteration.js";
+import {
+  getAlterationForAugmentedInterval,
+  getAlterationForDiminishedInterval,
+  getAlterationForMajorInterval,
+  getAlterationForMinorInterval,
+} from "./getAlteration.js";
 import { getName } from "./getName.js";
 import { getNoteOctave } from "./getNoteOctave.js";
 
@@ -28,16 +33,8 @@ const semitones: Semitones = {
 function DiminishedThird(note: Note, direction: "up" | "down" = "up"): Note {
   return {
     name: getName(note, direction, semitones, specialcases),
-    alteration: getAlterationForDiminishedInterval(
-      note,
-      direction,
-      specialcases,
-    ),
-    octave: getNoteOctave(
-      note,
-      notesThatMakeOctaveChange[direction],
-      direction,
-    ),
+    alteration: getAlterationForDiminishedInterval(note, direction, specialcases),
+    octave: getNoteOctave(note, notesThatMakeOctaveChange[direction], direction),
   };
 }
 
@@ -45,11 +42,7 @@ function MinorThird(note: Note, direction: "up" | "down" = "up"): Note {
   return {
     name: getName(note, direction, semitones, specialcases),
     alteration: getAlterationForMinorInterval(note, direction, specialcases),
-    octave: getNoteOctave(
-      note,
-      notesThatMakeOctaveChange[direction],
-      direction,
-    ),
+    octave: getNoteOctave(note, notesThatMakeOctaveChange[direction], direction),
   };
 }
 
@@ -57,27 +50,15 @@ function MajorThird(note: Note, direction: "up" | "down" = "up"): Note {
   return {
     name: getName(note, direction, semitones, specialcases),
     alteration: getAlterationForMajorInterval(note, direction, specialcases),
-    octave: getNoteOctave(
-      note,
-      notesThatMakeOctaveChange[direction],
-      direction,
-    ),
+    octave: getNoteOctave(note, notesThatMakeOctaveChange[direction], direction),
   };
 }
 
 function AugmentedThird(note: Note, direction: "up" | "down" = "up"): Note {
   return {
     name: getName(note, direction, semitones, specialcases),
-    alteration: getAlterationForAugmentedInterval(
-      note,
-      direction,
-      specialcases,
-    ),
-    octave: getNoteOctave(
-      note,
-      notesThatMakeOctaveChange[direction],
-      direction,
-    ),
+    alteration: getAlterationForAugmentedInterval(note, direction, specialcases),
+    octave: getNoteOctave(note, notesThatMakeOctaveChange[direction], direction),
   };
 }
 

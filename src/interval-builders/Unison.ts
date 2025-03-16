@@ -28,16 +28,8 @@ const semitones: Semitones = {
 function DiminishedUnison(note: Note, direction: "up" | "down" = "up"): Note {
   return {
     name: getName(note, direction, semitones, specialCases),
-    alteration: getAlterationForDiminishedInterval(
-      note,
-      direction,
-      specialCases,
-    ),
-    octave: getNoteOctave(
-      note,
-      notesThatMakeOctaveChange[direction],
-      direction,
-    ),
+    alteration: getAlterationForDiminishedInterval(note, direction, specialCases),
+    octave: getNoteOctave(note, notesThatMakeOctaveChange[direction], direction),
   };
 }
 
@@ -45,27 +37,15 @@ function PerfectUnison(note: Note, direction: "up" | "down" = "up"): Note {
   return {
     name: getName(note, direction, semitones, specialCases),
     alteration: getAlterationForPerfectInterval(note, direction, specialCases),
-    octave: getNoteOctave(
-      note,
-      notesThatMakeOctaveChange[direction],
-      direction,
-    ),
+    octave: getNoteOctave(note, notesThatMakeOctaveChange[direction], direction),
   };
 }
 
 function AugmentedUnison(note: Note, direction: "up" | "down" = "up"): Note {
   return {
     name: getName(note, direction, semitones, specialCases),
-    alteration: getAlterationForAugmentedInterval(
-      note,
-      direction,
-      specialCases,
-    ),
-    octave: getNoteOctave(
-      note,
-      notesThatMakeOctaveChange[direction],
-      direction,
-    ),
+    alteration: getAlterationForAugmentedInterval(note, direction, specialCases),
+    octave: getNoteOctave(note, notesThatMakeOctaveChange[direction], direction),
   };
 }
 export { PerfectUnison, DiminishedUnison, AugmentedUnison };

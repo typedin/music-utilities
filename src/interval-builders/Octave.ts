@@ -29,16 +29,8 @@ const semitones: Semitones = {
 function DiminishedOctave(note: Note, direction: "up" | "down" = "up"): Note {
   return {
     name: getName(note, direction, semitones, specialCases),
-    alteration: getAlterationForDiminishedInterval(
-      note,
-      direction,
-      specialCases,
-    ),
-    octave: getNoteOctave(
-      note,
-      notesThatMakeOctaveChange[direction],
-      direction,
-    ),
+    alteration: getAlterationForDiminishedInterval(note, direction, specialCases),
+    octave: getNoteOctave(note, notesThatMakeOctaveChange[direction], direction),
   };
 }
 
@@ -46,27 +38,15 @@ function PerfectOctave(note: Note, direction: "up" | "down" = "up"): Note {
   return {
     name: getName(note, direction, semitones, specialCases),
     alteration: getAlterationForPerfectInterval(note, direction, specialCases),
-    octave: getNoteOctave(
-      note,
-      notesThatMakeOctaveChange[direction],
-      direction,
-    ),
+    octave: getNoteOctave(note, notesThatMakeOctaveChange[direction], direction),
   };
 }
 
 function AugmentedOctave(note: Note, direction: "up" | "down" = "up"): Note {
   return {
     name: getName(note, direction, semitones, specialCases),
-    alteration: getAlterationForAugmentedInterval(
-      note,
-      direction,
-      specialCases,
-    ),
-    octave: getNoteOctave(
-      note,
-      notesThatMakeOctaveChange[direction],
-      direction,
-    ),
+    alteration: getAlterationForAugmentedInterval(note, direction, specialCases),
+    octave: getNoteOctave(note, notesThatMakeOctaveChange[direction], direction),
   };
 }
 

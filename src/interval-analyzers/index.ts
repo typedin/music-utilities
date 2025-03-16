@@ -18,11 +18,7 @@ function createInterval(
   );
 }
 
-function intervalUp(
-  firstNote: Note,
-  secondNote: Note,
-  intervalTable: IntervalTable[],
-): Interval | undefined {
+function intervalUp(firstNote: Note, secondNote: Note, intervalTable: IntervalTable[]): Interval | undefined {
   let currentOctave = secondNote.octave;
   do {
     for (const interval of intervalTable) {
@@ -79,12 +75,8 @@ function intervalDown(
   return undefined;
 }
 
-export default function IntervalAnalyzer(
-  firstNote: Note,
-  secondNote: Note,
-): Interval | undefined {
+export default function IntervalAnalyzer(firstNote: Note, secondNote: Note): Interval | undefined {
   return (
-    intervalUp(firstNote, secondNote, intervalTable) ||
-    intervalDown(firstNote, secondNote, intervalTable)
+    intervalUp(firstNote, secondNote, intervalTable) || intervalDown(firstNote, secondNote, intervalTable)
   );
 }

@@ -1,8 +1,4 @@
-import {
-  AugmentedFourth,
-  DiminishedFourth,
-  PerfectFourth,
-} from "../../interval-builders/Fourth";
+import { AugmentedFourth, DiminishedFourth, PerfectFourth } from "../../interval-builders/Fourth";
 import * as Fourths from "../__fixtures__/Fourths";
 import { AlterationEnum, DiatonicNoteEnum } from "../../constants";
 

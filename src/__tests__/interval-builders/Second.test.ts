@@ -3,27 +3,14 @@ import {
   diminishedSecondNatural,
   diminishedSecondSharps,
 } from "../__fixtures__/DiminishedSeconds";
-import {
-  minorSecondFlats,
-  minorSecondNatural,
-  minorSecondSharps,
-} from "../__fixtures__/MinorSeconds";
-import {
-  majorSecondFlats,
-  majorSecondNatural,
-  majorSecondSharps,
-} from "../__fixtures__/MajorSeconds";
+import { minorSecondFlats, minorSecondNatural, minorSecondSharps } from "../__fixtures__/MinorSeconds";
+import { majorSecondFlats, majorSecondNatural, majorSecondSharps } from "../__fixtures__/MajorSeconds";
 import {
   augmentedSecondFlats,
   augmentedSecondNatural,
   augmentedSecondSharps,
 } from "../__fixtures__/AugmentedSeconds";
-import {
-  AugmentedSecond,
-  MajorSecond,
-  MinorSecond,
-  DiminishedSecond,
-} from "../../interval-builders/Second";
+import { AugmentedSecond, MajorSecond, MinorSecond, DiminishedSecond } from "../../interval-builders/Second";
 
 import { A2, AdoubleFlat2, G2, GFlat2 } from "../tests-helpers";
 import { Note } from "../types";

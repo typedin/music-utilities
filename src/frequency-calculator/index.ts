@@ -1,10 +1,7 @@
 import analyzeInterval from "../interval-analyzers/index.js";
 import type { IReference, Note } from "../types/index.js";
 
-export default function calculateFrequency(
-  reference: IReference,
-  note: Note,
-): number {
+export default function calculateFrequency(reference: IReference, note: Note): number {
   const interval = analyzeInterval(reference, note);
 
   if (!interval) {

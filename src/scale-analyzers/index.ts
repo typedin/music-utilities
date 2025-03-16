@@ -80,10 +80,7 @@ export default function analyzeScale(scale: IScale): string | undefined {
     for (let i = 0; i < lookup.structure.length; i++) {
       // analyse the scale by comparing the first degree with each other one
       // @ts-ignore
-      const { direction, type, quality } = analyzeInterval(
-        scale.at(0),
-        scale.at(i + 1),
-      );
+      const { direction, type, quality } = analyzeInterval(scale.at(0), scale.at(i + 1));
       if (
         direction == lookup.structure[i].direction &&
         type == lookup.structure[i].type &&

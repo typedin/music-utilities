@@ -2,11 +2,11 @@ import type { IScaleBuilder, Note } from "../types/index.js";
 import { spanOver } from "./spanOver.js";
 import AllIntervals from "../interval-builders/index.js";
 
-export const ScaleBuilder = function(
+export const ScaleBuilder = function (
   this: IScaleBuilder,
   tonic: Note,
   scaleSchema: any,
-  number_of_octaves: number = 1
+  number_of_octaves: number = 1,
 ) {
   this.tonic = tonic;
   this.scaleSchema = scaleSchema;
@@ -19,19 +19,17 @@ export const ScaleBuilder = function(
 
   this.scale = () => {
     // this create a scale with 7 notes
-    let result = scaleSchema.map(
-      (element: { interval: string; function: string; }, index: number) => {
-        const note = AllIntervals.find(
-          (intervalBuilder) => intervalBuilder.name == element.interval
-        )?.callable(tonic);
-        return {
-          ...note,
-          order: index + 1,
-          degree: index + 1,
-          function: element.function,
-        };
-      }
-    );
+    let result = scaleSchema.map((element: { interval: string; function: string }, index: number) => {
+      const note = AllIntervals.find((intervalBuilder) => intervalBuilder.name == element.interval)?.callable(
+        tonic,
+      );
+      return {
+        ...note,
+        order: index + 1,
+        degree: index + 1,
+        function: element.function,
+      };
+    });
 
     // spanOver creates many scales with the repetition of the tonic
     // for example: 2 octaves in C Major
@@ -51,10 +49,5 @@ export const ScaleBuilder = function(
     return result;
   };
 } as any as {
-  new(
-    tonic: Note,
-    scaleSchema: any,
-    number_of_octaves?: number
-  ): IScaleBuilder;
+  new (tonic: Note, scaleSchema: any, number_of_octaves?: number): IScaleBuilder;
 };
-

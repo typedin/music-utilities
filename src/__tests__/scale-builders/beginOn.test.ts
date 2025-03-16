@@ -7,9 +7,7 @@ describe("beginOn", () => {
     const scale = Scales.C_MAJOR_SCALE;
 
     expect(beginOn(scale, testsHelpers.A1).length).toEqual(7);
-    expect(beginOn(scale, testsHelpers.A1)).toEqual(
-      Scales.C_MAJOR_SCALE_STARTING_ON_A,
-    );
+    expect(beginOn(scale, testsHelpers.A1)).toEqual(Scales.C_MAJOR_SCALE_STARTING_ON_A);
   });
 
   it("gets B minor scale", () => {

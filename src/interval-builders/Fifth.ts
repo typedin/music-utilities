@@ -15,9 +15,7 @@ function getAlterationForDiminishedFifth(
       : getPreviousAlteration(note.alteration);
   }
 
-  return specialCases[direction].includes(note.name)
-    ? note.alteration
-    : getNextAlteration(note.alteration);
+  return specialCases[direction].includes(note.name) ? note.alteration : getNextAlteration(note.alteration);
 }
 
 function getAlterationForPerfectFifth(
@@ -26,9 +24,7 @@ function getAlterationForPerfectFifth(
   specialCases: { up: string[]; down: string[] },
 ): AlterationEnum {
   if (direction == "up") {
-    return specialCases[direction].includes(note.name)
-      ? getNextAlteration(note.alteration)
-      : note.alteration;
+    return specialCases[direction].includes(note.name) ? getNextAlteration(note.alteration) : note.alteration;
   }
 
   return specialCases[direction].includes(note.name)
@@ -77,11 +73,7 @@ function DiminishedFifth(note: Note, direction: "up" | "down" = "up"): Note {
   return {
     name: getName(note, direction, semitones, specialCases),
     alteration: getAlterationForDiminishedFifth(note, direction, specialCases),
-    octave: getNoteOctave(
-      note,
-      notesThatMakeOctaveChange[direction],
-      direction,
-    ),
+    octave: getNoteOctave(note, notesThatMakeOctaveChange[direction], direction),
   };
 }
 
@@ -89,11 +81,7 @@ function PerfectFifth(note: Note, direction: "up" | "down" = "up"): Note {
   return {
     name: getName(note, direction, semitones, specialCases),
     alteration: getAlterationForPerfectFifth(note, direction, specialCases),
-    octave: getNoteOctave(
-      note,
-      notesThatMakeOctaveChange[direction],
-      direction,
-    ),
+    octave: getNoteOctave(note, notesThatMakeOctaveChange[direction], direction),
   };
 }
 
@@ -101,11 +89,7 @@ function AugmentedFifth(note: Note, direction: "up" | "down" = "up"): Note {
   return {
     name: getName(note, direction, semitones, specialCases),
     alteration: getAlterationForAugmentedFifth(note, direction, specialCases),
-    octave: getNoteOctave(
-      note,
-      notesThatMakeOctaveChange[direction],
-      direction,
-    ),
+    octave: getNoteOctave(note, notesThatMakeOctaveChange[direction], direction),
   };
 }
 

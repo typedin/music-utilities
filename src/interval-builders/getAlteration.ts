@@ -29,9 +29,7 @@ function getAlterationForMinorInterval(
       : getPreviousAlteration(note.alteration);
   }
 
-  return specialCases[direction].includes(note.name)
-    ? note.alteration
-    : getNextAlteration(note.alteration);
+  return specialCases[direction].includes(note.name) ? note.alteration : getNextAlteration(note.alteration);
 }
 
 function getAlterationForMajorInterval(
@@ -40,9 +38,7 @@ function getAlterationForMajorInterval(
   specialCases: { up: string[]; down: string[] },
 ): AlterationEnum {
   if (direction == "up") {
-    return specialCases[direction].includes(note.name)
-      ? getNextAlteration(note.alteration)
-      : note.alteration;
+    return specialCases[direction].includes(note.name) ? getNextAlteration(note.alteration) : note.alteration;
   }
 
   return specialCases[direction].includes(note.name)
