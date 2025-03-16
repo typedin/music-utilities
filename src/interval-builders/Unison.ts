@@ -1,3 +1,5 @@
+import { DiatonicNoteEnum } from "../constants.js";
+import { getNextAlteration, getPreviousAlteration } from "../helpers/index.js";
 import type { Note, Semitones } from "../types/index.js";
 import { getAlterationForAugmentedInterval, getAlterationForDiminishedInterval } from "./getAlteration.js";
 import { getAlterationForPerfectInterval } from "./getAlterationForPerfectInterval.js";
@@ -5,13 +7,13 @@ import { getName } from "./getName.js";
 import { getNoteOctave } from "./getNoteOctave.js";
 
 const specialCases = {
-  up: [],
-  down: [],
+  up: [] as Array<DiatonicNoteEnum>,
+  down: [] as Array<DiatonicNoteEnum>,
 };
 
 const notesThatMakeOctaveChange = {
-  up: [],
-  down: [],
+  up: [] as Array<DiatonicNoteEnum>,
+  down: [] as Array<DiatonicNoteEnum>,
 };
 
 const semitones: Semitones = {
@@ -26,9 +28,10 @@ const semitones: Semitones = {
 };
 
 function DiminishedUnison(note: Note, direction: "up" | "down" = "up"): Note {
+  // technically Diminished Unisons don't exist
   return {
     name: getName(note, direction, semitones, specialCases),
-    alteration: getAlterationForDiminishedInterval(note, direction, specialCases),
+    alteration: direction == "up" ? getPreviousAlteration(note.alteration) : getNextAlteration(note.alteration),
     octave: getNoteOctave(note, notesThatMakeOctaveChange[direction], direction),
   };
 }
