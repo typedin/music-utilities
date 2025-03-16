@@ -11,7 +11,7 @@ import { intervalBuilders } from "../interval-builders/index.js";
 // Octave Structure – Most scales repeat every octave (e.g., C–D–E–F–G–A–B–C).
 // Mode or Type – Scales can be major, minor, modal, or exotic, based on their interval patterns.
 // Number of Notes – Common scales have 5 (pentatonic), 7 (heptatonic), or even 12 (chromatic) notes.
-export const ScaleBuilder = function(
+export const ScaleBuilder = function (
   this: IScaleBuilder,
   tonic: Note,
   scaleSchema: any,
@@ -58,5 +58,5 @@ export const ScaleBuilder = function(
     return result;
   };
 } as any as {
-  new(tonic: Note, scaleSchema: any, number_of_octaves?: number): IScaleBuilder;
+  new (tonic: Note, scaleSchema: any, number_of_octaves?: number): IScaleBuilder;
 };
