@@ -1,7 +1,7 @@
-import { AlterationEnum, DiatonicNoteEnum } from "../../constants";
-import ScaleBuilder from "../../scale-builders/index";
-import * as Scales from "../__fixtures__/Scales";
-import { majorScaleSchema, naturalHarmonicMinorScaleSchema } from "./__fixtures__/scales-schemas";
+import { AlterationEnum, DiatonicNoteEnum } from "../../constants.js"
+import { ScaleBuilder } from "../../scale-builders/ScaleBuilder.js";
+import * as Scales from "../__fixtures__/Scales.js";
+import { majorScaleSchema, naturalHarmonicMinorScaleSchema } from "./__fixtures__/scales-schemas.js";
 
 describe("ScaleBuilder", () => {
   it("creates a major scale on one octave with the repetition of the tonic by default", () => {

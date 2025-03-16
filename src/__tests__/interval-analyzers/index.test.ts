@@ -1,7 +1,7 @@
-import analyzeInterval from "../../interval-analyzers/index";
+import analyzeInterval from "../../interval-analyzers/index.js"
 import { expect, describe, it } from "vitest";
-import { A2, AdoubleFlat2, C3, C4, C5, Csharp4, Db4, Esharp4, G2, GFlat2 } from "../tests-helpers";
-import { G_MAJOR_SCALE } from "../__fixtures__/Scales";
+import { A2, AdoubleFlat2, C3, C4, C5, Csharp4, Db4, Esharp4, G2, GFlat2 } from "../tests-helpers.js";
+import { G_MAJOR_SCALE } from "../__fixtures__/Scales.js";
 import { IMusicalString } from "../types";
 
 describe("analyzeInterval", () => {

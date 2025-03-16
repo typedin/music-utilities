@@ -1,8 +1,8 @@
-import * as Scales from "../__fixtures__/Scales";
-import * as testsHelpers from "../tests-helpers";
-import { getFirstPossibleNoteInScale } from "../../helpers";
-import { beginOn } from "../../scale-builders/beginOn";
-import { endOn } from "../../scale-builders/endOn";
+import { getFirstPossibleNoteInScale } from "../../helpers/index.js";
+import { beginOn } from "../../scale-builders/beginOn.js";
+import { endOn } from "../../scale-builders/endOn.js";
+import * as Scales from "../__fixtures__/Scales.js";
+import * as testsHelpers from "../tests-helpers.js";
 
 describe("endOn", () => {
   it("can limit when the end is in the scale", () => {

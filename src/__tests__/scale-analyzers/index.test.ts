@@ -1,5 +1,5 @@
-import analyzeScale from "../../scale-analyzers/index";
-import * as Scales from "../__fixtures__/Scales";
+import analyzeScale from "../../scale-analyzers/index.js"
+import * as Scales from "../__fixtures__/Scales.js";
 
 describe("index", () => {
   it("can identify a major scale", () => {

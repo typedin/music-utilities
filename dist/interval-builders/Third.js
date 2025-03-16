@@ -1,4 +1,4 @@
-import { getAlterationForAugmentedInterval, getAlterationForDiminishedInterval, getAlterationForMajorInterval, getAlterationForMinorInterval } from "./getAlteration.js";
+import { getAlterationForAugmentedInterval, getAlterationForDiminishedInterval, getAlterationForMajorInterval, getAlterationForMinorInterval, } from "./getAlteration.js";
 import { getName } from "./getName.js";
 import { getNoteOctave } from "./getNoteOctave.js";
 const specialcases = {

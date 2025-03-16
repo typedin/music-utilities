@@ -1,9 +1,8 @@
-import PositionBuilder from "../../position-builders";
-import { expect } from "vitest";
-import { C_MAJOR_SCALE } from "../__fixtures__/Scales";
-import { A3, A4, E5, G2 } from "../tests-helpers";
-import { buildNoteName } from "../../helpers";
-import { IMusicalString } from "../types";
+import PositionBuilders from "../../position-builders/index.js";
+import { C_MAJOR_SCALE } from "../__fixtures__/Scales.js";
+import { A3, A4, E5, G2 } from "../tests-helpers.js";
+import { buildNoteName } from "../../helpers/index.js";
+import type { IMusicalString } from "../../types/index.js";
 
 const scale = C_MAJOR_SCALE;
 describe("TraditionalBuilder", () => {
@@ -13,10 +12,10 @@ describe("TraditionalBuilder", () => {
       frequency: 659.25,
     };
     test("has 7 positions", () => {
-      expect(PositionBuilder(scale, firstString).length).toEqual(7);
+      expect(PositionBuilders(scale, firstString).length).toEqual(7);
     });
     test("open string is omitted", () => {
-      const first_note_position = PositionBuilder(scale, firstString)[0];
+      const first_note_position = PositionBuilders(scale, firstString)[0];
 
       expect(buildNoteName(first_note_position)).toEqual("F5");
     });
@@ -28,10 +27,10 @@ describe("TraditionalBuilder", () => {
       frequency: 440,
     };
     test("has 7 positions", () => {
-      expect(PositionBuilder(scale, firstString).length).toEqual(7);
+      expect(PositionBuilders(scale, firstString).length).toEqual(7);
     });
     test("open string is omitted", () => {
-      const first_note_position = PositionBuilder(scale, firstString)[0];
+      const first_note_position = PositionBuilders(scale, firstString)[0];
 
       expect(buildNoteName(first_note_position)).toEqual("B4");
     });
@@ -43,10 +42,10 @@ describe("TraditionalBuilder", () => {
       frequency: 220,
     };
     test("has 7 positions", () => {
-      expect(PositionBuilder(scale, firstString).length).toEqual(7);
+      expect(PositionBuilders(scale, firstString).length).toEqual(7);
     });
     test("open string is omitted", () => {
-      const first_note_position = PositionBuilder(scale, firstString)[0];
+      const first_note_position = PositionBuilders(scale, firstString)[0];
 
       expect(buildNoteName(first_note_position)).toEqual("B3");
     });
@@ -59,11 +58,11 @@ describe("TraditionalBuilder", () => {
         frequency: 98.0,
       };
       test("has 7 positions", () => {
-        expect(PositionBuilder(scale, firstString).length).toEqual(7);
+        expect(PositionBuilders(scale, firstString).length).toEqual(7);
       });
 
       test("open string is omitted", () => {
-        const first_note_position = PositionBuilder(scale, firstString)[0];
+        const first_note_position = PositionBuilders(scale, firstString)[0];
 
         expect(buildNoteName(first_note_position)).not.toEqual("G2");
         expect(buildNoteName(first_note_position)).toEqual("A2");
@@ -75,11 +74,11 @@ describe("TraditionalBuilder", () => {
         frequency: 98.0,
       };
       test("has 6 positions", () => {
-        expect(PositionBuilder(scale, firstString, { isRabbath: true }).length).toEqual(6);
+        expect(PositionBuilders(scale, firstString, { isRabbath: true }).length).toEqual(6);
       });
 
       test("open string is omitted", () => {
-        const all_positions = PositionBuilder(scale, firstString, {
+        const all_positions = PositionBuilders(scale, firstString, {
           isRabbath: true,
         });
 

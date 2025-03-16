@@ -1,6 +1,6 @@
-import { beginOn } from "../../scale-builders/beginOn";
-import * as Scales from "../__fixtures__/Scales";
-import * as testsHelpers from "../tests-helpers";
+import { beginOn } from "../../scale-builders/beginOn.js";
+import * as Scales from "../__fixtures__/Scales.js";
+import * as testsHelpers from "../tests-helpers.js";
 
 describe("beginOn", () => {
   it("gets C major scale", () => {

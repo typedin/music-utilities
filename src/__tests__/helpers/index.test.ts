@@ -1,8 +1,8 @@
-import * as helpers from "../../helpers";
+import * as helpers from "../../helpers.js";
 import { describe, expect, it, test } from "vitest";
-import * as testsHelpers from "../tests-helpers";
-import { AlterationEnum, DiatonicNoteEnum } from "../../constants";
-import { Eb4_MINOR_MELODIC_ASCENDING } from "../__fixtures__/Scales";
+import * as testsHelpers from "../tests-helpers.js";
+import { AlterationEnum, DiatonicNoteEnum } from "../../constants.js"
+import { Eb4_MINOR_MELODIC_ASCENDING } from "../__fixtures__/Scales.js";
 
 describe("isNoteHigher", () => {
   it("is false for enharmonies", () => {

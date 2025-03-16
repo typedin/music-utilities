@@ -12,7 +12,7 @@ import {
 } from "../__fixtures__/AugmentedSeconds";
 import { AugmentedSecond, MajorSecond, MinorSecond, DiminishedSecond } from "../../interval-builders/Second";
 
-import { A2, AdoubleFlat2, G2, GFlat2 } from "../tests-helpers";
+import { A2, AdoubleFlat2, G2, GFlat2 } from "../tests-helpers.js";
 import { Note } from "../types";
 
 describe("Second", () => {

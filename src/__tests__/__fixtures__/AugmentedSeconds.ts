@@ -1,4 +1,4 @@
-import { DiatonicNoteEnum, AlterationEnum } from "../../constants";
+import { DiatonicNoteEnum, AlterationEnum } from "../../constants.js"
 
 export const augmentedSecondNatural = [
   {

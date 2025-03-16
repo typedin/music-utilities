@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { AlterationEnum, DiatonicNoteEnum } from "../../constants";
+import { AlterationEnum, DiatonicNoteEnum } from "../../constants.js"
 import { AugmentedUnison, DiminishedUnison, PerfectUnison } from "../../interval-builders/Unison";
 
 describe("Unison", () => {

@@ -1,4 +1,4 @@
-import { AlterationEnum, DiatonicNoteEnum } from "../constants";
+import { AlterationEnum, DiatonicNoteEnum } from "../constants.js"
 
 export type IScale = any;
 

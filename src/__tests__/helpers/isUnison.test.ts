@@ -1,5 +1,5 @@
 import * as isUnison from "../../helpers/isUnison";
-import * as testsHelpers from "../tests-helpers";
+import * as testsHelpers from "../tests-helpers.js";
 
 describe("isUnison", () => {
   it("is true for same notes on same octave", () => {

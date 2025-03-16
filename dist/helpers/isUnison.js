@@ -1,7 +1,7 @@
 import { DiatonicNoteEnum } from "../constants.js";
 import { getNextAlteration, getPreviousAlteration, indexOfNote } from "./index.js";
 function areNotesTheSame(firstNote, secondNote) {
-    return (firstNote.octave == secondNote.octave && firstNote.name == secondNote.name);
+    return firstNote.octave == secondNote.octave && firstNote.name == secondNote.name;
 }
 function isNoteB(aNote) {
     return aNote.name == DiatonicNoteEnum.B;
@@ -11,30 +11,24 @@ function areNotesSeconds(firstNote, secondNote) {
         Math.abs(indexOfNote(firstNote) - indexOfNote(secondNote)) < 2);
 }
 function areNotesSpecialSecondsDown(firstNote, secondNote) {
-    return (((firstNote.name == DiatonicNoteEnum.F &&
-        secondNote.name == DiatonicNoteEnum.E) ||
+    return (((firstNote.name == DiatonicNoteEnum.F && secondNote.name == DiatonicNoteEnum.E) ||
         (firstNote.name == DiatonicNoteEnum.C && isNoteB(secondNote))) &&
         areNotesSeconds(firstNote, secondNote));
 }
 function areNotesDiminishedSeconds(firstNote, secondNote) {
-    return (getNextAlteration(secondNote.alteration) ==
-        getPreviousAlteration(firstNote.alteration) ||
-        getPreviousAlteration(secondNote.alteration) ==
-            getNextAlteration(firstNote.alteration));
+    return (getNextAlteration(secondNote.alteration) == getPreviousAlteration(firstNote.alteration) ||
+        getPreviousAlteration(secondNote.alteration) == getNextAlteration(firstNote.alteration));
 }
 function areNotesSpecialSecondsUp(firstNote, secondNote) {
-    return (((firstNote.name == DiatonicNoteEnum.E &&
-        secondNote.name == DiatonicNoteEnum.F) ||
+    return (((firstNote.name == DiatonicNoteEnum.E && secondNote.name == DiatonicNoteEnum.F) ||
         (isNoteB(firstNote) && secondNote.name == DiatonicNoteEnum.C)) &&
         areNotesSeconds(firstNote, secondNote));
 }
 function isComparingCandB(firstNote, secondNote) {
-    if (secondNote.name == DiatonicNoteEnum.C &&
-        firstNote.octave == secondNote.octave - 1) {
+    if (secondNote.name == DiatonicNoteEnum.C && firstNote.octave == secondNote.octave - 1) {
         return true;
     }
-    if (firstNote.name == DiatonicNoteEnum.C &&
-        firstNote.octave - 1 == secondNote.octave) {
+    if (firstNote.name == DiatonicNoteEnum.C && firstNote.octave - 1 == secondNote.octave) {
         return true;
     }
     return false;

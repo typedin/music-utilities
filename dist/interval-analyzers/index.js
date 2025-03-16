@@ -50,7 +50,6 @@ function intervalDown(firstNote, secondNote, intervalTable) {
     return undefined;
 }
 export default function IntervalAnalyzer(firstNote, secondNote) {
-    return (intervalUp(firstNote, secondNote, intervalTable) ||
-        intervalDown(firstNote, secondNote, intervalTable));
+    return (intervalUp(firstNote, secondNote, intervalTable) || intervalDown(firstNote, secondNote, intervalTable));
 }
 //# sourceMappingURL=index.js.map

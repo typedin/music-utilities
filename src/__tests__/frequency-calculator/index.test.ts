@@ -1,6 +1,5 @@
-import calculateFrequency from "../../frequency-calculator/index";
-import { describe, expect, it } from "vitest";
-import { A4, Ab4, B4, Bbb4, C2, C5, Cb4, Csharp5 } from "../tests-helpers";
+import calculateFrequency from "../../frequency-calculator/index.js"
+import { A4, Ab4, B4, Bbb4, C2, C5, Cb4, Csharp5 } from "../tests-helpers.js";
 
 describe("CalculateFrequency", () => {
   it("can calculate a unison", () => {

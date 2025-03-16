@@ -59,9 +59,7 @@ export function getNextAlteration(needle) {
 }
 export function isInScale(haystack, needle) {
     const index = haystack.findIndex((e) => {
-        return (e.octave == needle.octave &&
-            e.name == needle.name &&
-            e.alteration == needle.alteration);
+        return e.octave == needle.octave && e.name == needle.name && e.alteration == needle.alteration;
     });
     return index > -1;
 }

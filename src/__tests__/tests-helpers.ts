@@ -1,5 +1,5 @@
-import { AlterationEnum, DiatonicNoteEnum } from "../constants";
-import { Note } from "../types";
+import { AlterationEnum, DiatonicNoteEnum } from "../constants.js"
+import type { Note } from "../types/index.js";
 
 export const C1: Note = {
   name: DiatonicNoteEnum.C,

@@ -1,11 +1,11 @@
-import { DiminishedUnison, PerfectUnison, AugmentedUnison, } from "../interval-builders/Unison.js";
-import { AugmentedThird, DiminishedThird, MajorThird, MinorThird, } from "../interval-builders/Third.js";
-import { AugmentedFourth, DiminishedFourth, PerfectFourth, } from "../interval-builders/Fourth.js";
-import { AugmentedFifth, DiminishedFifth, PerfectFifth, } from "../interval-builders/Fifth.js";
+import { DiminishedUnison, PerfectUnison, AugmentedUnison } from "../interval-builders/Unison.js";
+import { AugmentedThird, DiminishedThird, MajorThird, MinorThird } from "../interval-builders/Third.js";
+import { AugmentedFourth, DiminishedFourth, PerfectFourth } from "../interval-builders/Fourth.js";
+import { AugmentedFifth, DiminishedFifth, PerfectFifth } from "../interval-builders/Fifth.js";
 import { AugmentedSeventh, DiminishedSeventh, MajorSeventh, MinorSeventh, } from "../interval-builders/Seventh.js";
-import { AugmentedSixth, DiminishedSixth, MajorSixth, MinorSixth, } from "../interval-builders/Sixth.js";
-import { AugmentedOctave, DiminishedOctave, PerfectOctave, } from "../interval-builders/Octave.js";
-import { AugmentedSecond, DiminishedSecond, MajorSecond, MinorSecond, } from "../interval-builders/Second.js";
+import { AugmentedSixth, DiminishedSixth, MajorSixth, MinorSixth } from "../interval-builders/Sixth.js";
+import { AugmentedOctave, DiminishedOctave, PerfectOctave } from "../interval-builders/Octave.js";
+import { AugmentedSecond, DiminishedSecond, MajorSecond, MinorSecond } from "../interval-builders/Second.js";
 const intervalTable = [
     {
         type: "unison",

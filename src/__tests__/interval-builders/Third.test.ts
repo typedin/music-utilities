@@ -12,7 +12,7 @@ import {
 } from "../__fixtures__/DiminishedThirds";
 import { majorThirdFlats, majorThirdNatural, majorThirdSharps } from "../__fixtures__/MajorThirds";
 import { minorThirdFlats, minorThirdNatural, minorThirdSharps } from "../__fixtures__/MinorThirds";
-import { AdoubleFlat2, C3 } from "../tests-helpers";
+import { AdoubleFlat2, C3 } from "../tests-helpers.js";
 
 describe("Thirds", () => {
   describe("Diminished", () => {

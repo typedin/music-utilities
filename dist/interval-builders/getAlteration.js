@@ -15,15 +15,11 @@ function getAlterationForMinorInterval(note, direction, specialCases) {
             ? note.alteration
             : getPreviousAlteration(note.alteration);
     }
-    return specialCases[direction].includes(note.name)
-        ? note.alteration
-        : getNextAlteration(note.alteration);
+    return specialCases[direction].includes(note.name) ? note.alteration : getNextAlteration(note.alteration);
 }
 function getAlterationForMajorInterval(note, direction, specialCases) {
     if (direction == "up") {
-        return specialCases[direction].includes(note.name)
-            ? getNextAlteration(note.alteration)
-            : note.alteration;
+        return specialCases[direction].includes(note.name) ? getNextAlteration(note.alteration) : note.alteration;
     }
     return specialCases[direction].includes(note.name)
         ? getPreviousAlteration(note.alteration)
