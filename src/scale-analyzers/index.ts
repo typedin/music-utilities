@@ -1,4 +1,5 @@
 import type { IScale } from "../types/index.js";
+import analyzeInterval from "../interval-analyzers/index.js";
 
 const all_scales = [
   {
@@ -73,7 +74,7 @@ const all_scales = [
   },
 ];
 
-export default function analyzeScale(scale: IScale): string | undefined {
+export default function scaleAnalyser(scale: IScale): string | undefined {
   let result: string | undefined = undefined;
 
   outer: for (const lookup of all_scales) {
