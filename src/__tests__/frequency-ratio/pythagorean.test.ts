@@ -1,5 +1,5 @@
 import pythagorean from "../../frequency-ratio/pythagorean";
-import frenquecyRatio from "../../frequency-ratio/index.js"
+import frenquecyRatio from "../../frequency-ratio/index.js";
 
 const REFERENCE = 261;
 

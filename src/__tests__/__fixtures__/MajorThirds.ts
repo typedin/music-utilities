@@ -1,4 +1,4 @@
-import { DiatonicNoteEnum, AlterationEnum } from "../../constants.js"
+import { DiatonicNoteEnum, AlterationEnum } from "../../constants.js";
 
 export const majorThirdNatural = [
   {

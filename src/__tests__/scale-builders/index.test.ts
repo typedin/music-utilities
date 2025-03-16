@@ -1,4 +1,4 @@
-import { AlterationEnum, DiatonicNoteEnum } from "../../constants.js"
+import { AlterationEnum, DiatonicNoteEnum } from "../../constants.js";
 import { ScaleBuilder } from "../../scale-builders/ScaleBuilder.js";
 import * as Scales from "../__fixtures__/Scales.js";
 import { majorScaleSchema, naturalHarmonicMinorScaleSchema } from "./__fixtures__/scales-schemas.js";

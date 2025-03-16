@@ -1,4 +1,4 @@
-import frenquecyRatio from "../../frequency-ratio/index.js"
+import frenquecyRatio from "../../frequency-ratio/index.js";
 import equal from "../../frequency-ratio/equal";
 
 const REFERENCE_IN_FREQUENCY = {

@@ -1,4 +1,4 @@
-import analyzeInterval from "../../interval-analyzers/index.js"
+import analyzeInterval from "../../interval-analyzers/index.js";
 import { expect, describe, it } from "vitest";
 import { A2, AdoubleFlat2, C3, C4, C5, Csharp4, Db4, Esharp4, G2, GFlat2 } from "../tests-helpers.js";
 import { G_MAJOR_SCALE } from "../__fixtures__/Scales.js";

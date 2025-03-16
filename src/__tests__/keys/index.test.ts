@@ -1,4 +1,4 @@
-import { AlterationEnum, DiatonicNoteEnum, ModeEnum } from "../../constants.js"
+import { AlterationEnum, DiatonicNoteEnum, ModeEnum } from "../../constants.js";
 import getRelativeKey from "../../keys";
 
 describe("index", () => {
