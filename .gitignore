@@ -28,4 +28,4 @@ logs/
 
 # Build artifacts
 *.tsbuildinfo
-dist
+dist/
