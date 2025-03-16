@@ -75,7 +75,7 @@ function intervalDown(
   return undefined;
 }
 
-export default function IntervalAnalyzer(firstNote: Note, secondNote: Note): Interval | undefined {
+export function intervalAnalyzer(firstNote: Note, secondNote: Note): Interval | undefined {
   return (
     intervalUp(firstNote, secondNote, intervalTable) || intervalDown(firstNote, secondNote, intervalTable)
   );

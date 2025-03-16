@@ -40,6 +40,7 @@ function areNotesSpecialSecondsUp(firstNote: Note, secondNote: Note): boolean {
   );
 }
 
+// WARNING what it the name of this function
 function isComparingCandB(firstNote: Note, secondNote: Note) {
   if (secondNote.name == DiatonicNoteEnum.C && firstNote.octave == secondNote.octave - 1) {
     return true;

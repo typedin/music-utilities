@@ -1,4 +1,4 @@
-import frenquecyRatio from "../../frequency-ratio/index.js";
+import { frequencyRatio } from "../../frequency-ratio/index.js";
 import equal from "../../frequency-ratio/equal.js";
 
 const REFERENCE_IN_FREQUENCY = {
@@ -13,7 +13,7 @@ const REFERENCE_IN_LENGTH = {
 describe("equal for reference in hertz", () => {
   describe("major second", () => {
     it("can be calculated up", () => {
-      const result = frenquecyRatio(
+      const result = frequencyRatio(
         REFERENCE_IN_FREQUENCY,
         {
           direction: "up",
@@ -27,7 +27,7 @@ describe("equal for reference in hertz", () => {
   });
   describe("major third", () => {
     it("can be calculated up", () => {
-      const result = frenquecyRatio(
+      const result = frequencyRatio(
         REFERENCE_IN_FREQUENCY,
         {
           direction: "up",
@@ -41,7 +41,7 @@ describe("equal for reference in hertz", () => {
   });
   describe("perfect fifth", () => {
     it("can be calculated up", () => {
-      const result = frenquecyRatio(
+      const result = frequencyRatio(
         REFERENCE_IN_FREQUENCY,
         {
           direction: "up",
@@ -56,7 +56,7 @@ describe("equal for reference in hertz", () => {
 
   describe("minor sixth", () => {
     it("can be calculated up", () => {
-      const result = frenquecyRatio(
+      const result = frequencyRatio(
         REFERENCE_IN_FREQUENCY,
         {
           direction: "up",
@@ -70,7 +70,7 @@ describe("equal for reference in hertz", () => {
   });
   describe("major seventh", () => {
     it("can be calculated up", () => {
-      const result = frenquecyRatio(
+      const result = frequencyRatio(
         REFERENCE_IN_FREQUENCY,
         {
           direction: "up",
@@ -84,7 +84,7 @@ describe("equal for reference in hertz", () => {
   });
   describe("perfect octave", () => {
     it("can be calculated up", () => {
-      const result = frenquecyRatio(
+      const result = frequencyRatio(
         REFERENCE_IN_FREQUENCY,
         {
           direction: "up",
@@ -100,7 +100,7 @@ describe("equal for reference in hertz", () => {
 describe("equal for reference in length", () => {
   describe("minor second", () => {
     it("can be calculated up", () => {
-      const result = frenquecyRatio(
+      const result = frequencyRatio(
         REFERENCE_IN_LENGTH,
         {
           direction: "up",
@@ -114,7 +114,7 @@ describe("equal for reference in length", () => {
   });
   describe("major second", () => {
     it("can be calculated up", () => {
-      const result = frenquecyRatio(
+      const result = frequencyRatio(
         REFERENCE_IN_LENGTH,
         {
           direction: "up",

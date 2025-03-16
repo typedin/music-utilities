@@ -1,5 +1,5 @@
 import type { IScale } from "../types/index.js";
-import analyzeInterval from "../interval-analyzers/index.js";
+import { intervalAnalyzer } from "../interval-analyzers/index.js";
 
 const all_scales = [
   {
@@ -74,14 +74,14 @@ const all_scales = [
   },
 ];
 
-export default function scaleAnalyser(scale: IScale): string | undefined {
+export function scaleAnalyser(scale: IScale): string | undefined {
   let result: string | undefined = undefined;
 
   outer: for (const lookup of all_scales) {
     for (let i = 0; i < lookup.structure.length; i++) {
       // analyse the scale by comparing the first degree with each other one
       // @ts-ignore
-      const { direction, type, quality } = analyzeInterval(scale.at(0), scale.at(i + 1));
+      const { direction, type, quality } = intervalAnalyzer(scale.at(0), scale.at(i + 1));
       if (
         direction == lookup.structure[i].direction &&
         type == lookup.structure[i].type &&

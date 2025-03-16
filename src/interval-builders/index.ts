@@ -7,7 +7,7 @@ import { AugmentedSixth, DiminishedSixth, MajorSixth, MinorSixth } from "./Sixth
 import { AugmentedThird, DiminishedThird, MajorThird, MinorThird } from "./Third.js";
 import { AugmentedUnison, DiminishedUnison, PerfectUnison } from "./Unison.js";
 
-export default [
+const intervalBuilders = [
   // Unison
   { callable: DiminishedUnison, name: "DiminishedUnison" },
   { callable: PerfectUnison, name: "PerfectUnison" },
@@ -45,3 +45,5 @@ export default [
   { callable: PerfectOctave, name: "PerfectOctave" },
   { callable: DiminishedOctave, name: "DiminishedOctave" },
 ];
+
+export { intervalBuilders };

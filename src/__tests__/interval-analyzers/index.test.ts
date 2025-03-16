@@ -1,12 +1,12 @@
-import analyzeInterval from "../../interval-analyzers/index.js";
 import { A2, AdoubleFlat2, C3, C4, C5, Csharp4, Db4, Esharp4, G2, GFlat2 } from "../tests-helpers.js";
 import { G_MAJOR_SCALE } from "../__fixtures__/Scales.js";
 import type { IMusicalString } from "../../types/index.js";
+import { intervalAnalyzer } from "../../interval-analyzers/index.js";
 
-describe("analyzeInterval", () => {
+describe("intervalAnalyzer", () => {
   describe("non compound", () => {
     it("analyzes a unisson", () => {
-      expect(analyzeInterval(C4, C4)).toEqual({
+      expect(intervalAnalyzer(C4, C4)).toEqual({
         direction: expect.any(String),
         compound: false,
         type: "unison",
@@ -16,7 +16,7 @@ describe("analyzeInterval", () => {
     });
 
     it("analyzes a minor second up", () => {
-      expect(analyzeInterval(C4, Db4)).toEqual({
+      expect(intervalAnalyzer(C4, Db4)).toEqual({
         direction: "up",
         compound: false,
         type: "second",
@@ -26,7 +26,7 @@ describe("analyzeInterval", () => {
     });
 
     it("analyzes a diminished second up", () => {
-      expect(analyzeInterval(Csharp4, Db4)).toEqual({
+      expect(intervalAnalyzer(Csharp4, Db4)).toEqual({
         direction: "up",
         compound: false,
         type: "second",
@@ -36,7 +36,7 @@ describe("analyzeInterval", () => {
     });
 
     it("analyzes a diminished second down", () => {
-      expect(analyzeInterval(Db4, Csharp4)).toEqual({
+      expect(intervalAnalyzer(Db4, Csharp4)).toEqual({
         direction: "down",
         compound: false,
         type: "second",
@@ -49,7 +49,7 @@ describe("analyzeInterval", () => {
   describe("compound", () => {
     describe("up", () => {
       it("analyzes a compound octave", () => {
-        expect(analyzeInterval(C3, C5)).toEqual({
+        expect(intervalAnalyzer(C3, C5)).toEqual({
           direction: "up",
           compound: true,
           type: "octave",
@@ -58,7 +58,7 @@ describe("analyzeInterval", () => {
         });
       });
       it("analyzes an augmented third up", () => {
-        expect(analyzeInterval(C3, Esharp4)).toEqual({
+        expect(intervalAnalyzer(C3, Esharp4)).toEqual({
           direction: "up",
           compound: true,
           type: "third",
@@ -69,7 +69,7 @@ describe("analyzeInterval", () => {
 
       it.skip("analyzes an augmented second up", () => {
         // TODO
-        expect(analyzeInterval(GFlat2, A2)).toEqual({
+        expect(intervalAnalyzer(GFlat2, A2)).toEqual({
           direction: "up",
           compound: true,
           type: "second",
@@ -80,7 +80,7 @@ describe("analyzeInterval", () => {
     });
     describe("down", () => {
       it("analyzes a compound octave", () => {
-        expect(analyzeInterval(C5, C3)).toEqual({
+        expect(intervalAnalyzer(C5, C3)).toEqual({
           direction: "down",
           compound: true,
           type: "octave",
@@ -90,14 +90,14 @@ describe("analyzeInterval", () => {
       });
 
       it("analyzes an augmented third down", () => {
-        expect(analyzeInterval(Esharp4, C3)).toEqual({
+        expect(intervalAnalyzer(Esharp4, C3)).toEqual({
           direction: "down",
           compound: true,
           type: "third",
           quality: "augmented",
           halfsteps: 17,
         });
-        expect(analyzeInterval(C4, AdoubleFlat2)).toEqual({
+        expect(intervalAnalyzer(C4, AdoubleFlat2)).toEqual({
           direction: "down",
           compound: true,
           type: "third",
@@ -114,7 +114,7 @@ describe("analyzeInterval", () => {
         ...G2,
         frequency: 98.0,
       };
-      expect(analyzeInterval(G_MAJOR_SCALE[0], stringRoot)).toEqual({
+      expect(intervalAnalyzer(G_MAJOR_SCALE[0], stringRoot)).toEqual({
         direction: expect.any(String),
         compound: false,
         type: "unison",
@@ -128,7 +128,7 @@ describe("analyzeInterval", () => {
         ...G2,
         frequency: 98.0,
       };
-      expect(analyzeInterval(G_MAJOR_SCALE[1], stringRoot)).toEqual({
+      expect(intervalAnalyzer(G_MAJOR_SCALE[1], stringRoot)).toEqual({
         direction: "down",
         compound: false,
         type: "second",

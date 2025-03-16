@@ -1,5 +1,5 @@
 import { AlterationEnum, DiatonicNoteEnum } from "../../constants.js";
-import cycleOfFifths from "../../cycle-of-fifths/index.js";
+import { cycleOfFifths } from "../../cycle-of-fifths/index.js";
 
 describe("index", () => {
   it("works", () => {

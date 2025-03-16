@@ -1,12 +1,12 @@
 import pythagorean from "../../frequency-ratio/pythagorean.js";
-import frenquecyRatio from "../../frequency-ratio/index.js";
+import { frequencyRatio } from "../../frequency-ratio/index.js";
 
 const REFERENCE = 261;
 
 describe("pythagorean", () => {
   describe("major second", () => {
     it("can be calculated up", () => {
-      const result = frenquecyRatio(
+      const result = frequencyRatio(
         REFERENCE,
         {
           direction: "up",
@@ -20,7 +20,7 @@ describe("pythagorean", () => {
   });
   describe("major third", () => {
     it("can be calculated up", () => {
-      const result = frenquecyRatio(
+      const result = frequencyRatio(
         REFERENCE,
         {
           direction: "up",
@@ -34,7 +34,7 @@ describe("pythagorean", () => {
   });
   describe("perfect forth", () => {
     it("can be calculated up", () => {
-      const result = frenquecyRatio(
+      const result = frequencyRatio(
         REFERENCE,
         {
           direction: "up",
@@ -49,7 +49,7 @@ describe("pythagorean", () => {
 
   describe("perfect fifth", () => {
     it("can be calculated up", () => {
-      const result = frenquecyRatio(
+      const result = frequencyRatio(
         REFERENCE,
         {
           direction: "up",
@@ -64,7 +64,7 @@ describe("pythagorean", () => {
 
   describe("minor sixth", () => {
     it("can be calculated up", () => {
-      const result = frenquecyRatio(
+      const result = frequencyRatio(
         REFERENCE,
         {
           direction: "up",
@@ -78,7 +78,7 @@ describe("pythagorean", () => {
   });
   describe("major seventh", () => {
     it("can be calculated up", () => {
-      const result = frenquecyRatio(
+      const result = frequencyRatio(
         REFERENCE,
         {
           direction: "up",
@@ -92,7 +92,7 @@ describe("pythagorean", () => {
   });
   describe("octave", () => {
     it("can be calculated up", () => {
-      const result = frenquecyRatio(
+      const result = frequencyRatio(
         REFERENCE,
         {
           direction: "up",

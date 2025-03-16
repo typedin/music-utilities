@@ -1,4 +1,4 @@
-import calculateFrequency from "../frequency-calculator/index.js";
+import { calculateFrequency } from "../frequency-calculator/index.js";
 import type { IReference, Note } from "../types/index.js";
 
 type interval = {
@@ -6,7 +6,7 @@ type interval = {
   name: string;
 };
 
-export default function frequencyRatio(frequency: any, interval: interval, temperament: any): number {
+export function frequencyRatio(frequency: any, interval: interval, temperament: any): number {
   return temperament(frequency)[interval.name][interval.direction];
 }
 
