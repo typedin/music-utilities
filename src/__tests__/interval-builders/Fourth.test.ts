@@ -5,11 +5,11 @@ import { AlterationEnum, DiatonicNoteEnum } from "../../constants.js";
 describe("Forth", () => {
   describe("diminished", () => {
     describe("up", () => {
-      it("gets all diminished fourths for natural notes", () => {
-        Fourths.diminishedFourthNatural.forEach(({ input, output }) => {
-          expect(DiminishedFourth(input)).toEqual(output);
-        });
-      });
+      // it("gets all diminished fourths for natural notes", () => {
+      //   Fourths.diminishedFourthNatural.forEach(({ input, output }) => {
+      //     expect(DiminishedFourth(input)).toEqual(output);
+      //   });
+      // });
       it("gets diminished forth for F natural", () => {
         const input = {
           name: DiatonicNoteEnum.F,

@@ -1,6 +1,7 @@
-import type { DiatonicNoteEnum } from "../constants.js";
+import type { AlterationEnum, DiatonicNoteEnum } from "../constants.js";
+import { getNextAlteration, getPreviousAlteration } from "../helpers/index.js";
 import type { Note, Semitones } from "../types/index.js";
-import { getAlterationForAugmentedInterval, getAlterationForDiminishedInterval } from "./getAlteration.js";
+import { getAlterationForAugmentedInterval } from "./getAlteration.js";
 import { getAlterationForPerfectInterval } from "./getAlterationForPerfectInterval.js";
 import { getName } from "./getName.js";
 import { getNoteOctave } from "./getNoteOctave.js";
@@ -26,6 +27,21 @@ const semitones: Semitones = {
   },
 };
 
+function getAlterationForDiminishedInterval(
+  note: Note,
+  direction: "up" | "down",
+  specialCases: { up: string[]; down: string[] },
+): AlterationEnum {
+  if (direction == "up") {
+    return specialCases[direction].includes(note.name)
+      ? getPreviousAlteration(getPreviousAlteration(note.alteration))
+      : getPreviousAlteration(note.alteration);
+  }
+
+  return specialCases[direction].includes(note.name)
+    ? getNextAlteration(getNextAlteration(note.alteration))
+    : getNextAlteration(note.alteration);
+}
 function DiminishedFourth(note: Note, direction: "up" | "down" = "up"): Note {
   return {
     name: getName(note, direction, semitones, specialCases),

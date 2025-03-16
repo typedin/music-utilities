@@ -65,7 +65,7 @@ export interface Alteration {
     | AlterationEnum.doubleSharp;
 }
 
-export type IntervalBuilder = (note: Note, direction: "up" | "down" = "up") => Note;
+export type IntervalBuilder = (note: Note, direction: "up" | "down") => Note;
 
 export interface StringInstumentPreset {
   strings: Array<IMusicalString>;
