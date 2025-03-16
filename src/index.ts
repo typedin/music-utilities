@@ -1,9 +1,22 @@
 export { cycleOfFifths } from "./cycle-of-fifths/index.js";
 export { calculateFrequency } from "./frequency-calculator/index.js";
 export { frequencyRatio, frequencyAsPercentage } from "./frequency-ratio/index.js";
-export { equal } from "./frequency-ratio/equal.js"
-export { pythagorean } from "./frequency-ratio/pythagorean.js"
-export { indexOfNote, asNote, getFirstPossibleNoteInScale, buildNoteName, parseNoteName, isInScale, getNextAlteration, getPreviousAlteration, getNextNoteOnScale, getNoteFromInterval, isNoteLower, isNoteHigher } from "./helpers/index.js";
+export { equal } from "./frequency-ratio/equal.js";
+export { pythagorean } from "./frequency-ratio/pythagorean.js";
+export {
+  asNote,
+  buildNoteName,
+  getFirstPossibleNoteInScale,
+  getNextAlteration,
+  getNextNoteOnScale,
+  getNoteFromInterval,
+  getPreviousAlteration,
+  indexOfNote,
+  isInScale,
+  isNoteHigher,
+  isNoteLower,
+  parseNoteName,
+} from "./helpers/index.js";
 export { intervalAnalyzer } from "./interval-analyzers/index.js";
 export { intervalBuilders } from "./interval-builders/index.js";
 export { getRelativeKey } from "./keys/index.js";

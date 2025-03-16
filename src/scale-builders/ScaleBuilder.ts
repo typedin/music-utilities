@@ -2,7 +2,16 @@ import type { IScaleBuilder, Note } from "../types/index.js";
 import { spanOver } from "./spanOver.js";
 import { intervalBuilders } from "../interval-builders/index.js";
 
-export const ScaleBuilder = function (
+// INFO go see the type declaration
+//
+// Key Elements of a Scale:
+//
+// Tonic (Root Note) – The starting note that gives the scale its name.
+// Intervals – The pattern of whole steps (W) and half steps (H) that determine the character of the scale.
+// Octave Structure – Most scales repeat every octave (e.g., C–D–E–F–G–A–B–C).
+// Mode or Type – Scales can be major, minor, modal, or exotic, based on their interval patterns.
+// Number of Notes – Common scales have 5 (pentatonic), 7 (heptatonic), or even 12 (chromatic) notes.
+export const ScaleBuilder = function(
   this: IScaleBuilder,
   tonic: Note,
   scaleSchema: any,
@@ -49,5 +58,5 @@ export const ScaleBuilder = function (
     return result;
   };
 } as any as {
-  new (tonic: Note, scaleSchema: any, number_of_octaves?: number): IScaleBuilder;
+  new(tonic: Note, scaleSchema: any, number_of_octaves?: number): IScaleBuilder;
 };
