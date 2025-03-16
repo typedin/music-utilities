@@ -28,5 +28,7 @@
     /* doesn't require access to DOM API */
     "lib": ["es2022"],
     "types": ["vitest/globals"]
-  }
+  },
+  "include": ["src"],
+  "exclude": ["vitest.config.ts"]
 }

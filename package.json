@@ -1,1 +1,38 @@
+{
+  "name": "@typedin/music-utilities",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "tsc",
     "test": "vitest run",
+    "format": "prettier --write .",
+    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+    "ci": "npm run build && npm run format && npm run check-exports && npm run lint && npm run test"
+  },
+  "keywords": [
+    "music",
+    "intervals",
+    "scales",
+    "strings",
+    "positions",
+    "chords"
+  ],
+  "author": "typedin",
+  "license": "ISC",
+  "description": "A set of resources and modules I use to develop music applications.",
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.17.4",
+    "@vitest/coverage-v8": "^3.0.8",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/typedin/music-utilities.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "type": "module"
+}
