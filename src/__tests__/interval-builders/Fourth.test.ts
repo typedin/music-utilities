@@ -1,5 +1,5 @@
-import { AugmentedFourth, DiminishedFourth, PerfectFourth } from "../../interval-builders/Fourth";
-import * as Fourths from "../__fixtures__/Fourths";
+import { AugmentedFourth, DiminishedFourth, PerfectFourth } from "../../interval-builders/Fourth.js";
+import * as Fourths from "../__fixtures__/Fourths.js";
 import { AlterationEnum, DiatonicNoteEnum } from "../../constants.js";
 
 describe("Forth", () => {

@@ -1,4 +1,4 @@
-import * as isUnison from "../../helpers/isUnison";
+import * as isUnison from "../../helpers/isUnison.js";
 import * as testsHelpers from "../tests-helpers.js";
 
 describe("isUnison", () => {

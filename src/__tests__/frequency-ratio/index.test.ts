@@ -1,5 +1,5 @@
-import { IReference } from "../types";
 import { frequencyAsPercentage } from "../../frequency-ratio/index.js";
+import type { IReference } from "../../types/index.js";
 import { A4, A5, Eb5 } from "../tests-helpers.js";
 
 describe("frequencyAsPercentage", () => {

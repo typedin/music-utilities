@@ -2,18 +2,23 @@ import {
   diminishedSecondFlats,
   diminishedSecondNatural,
   diminishedSecondSharps,
-} from "../__fixtures__/DiminishedSeconds";
-import { minorSecondFlats, minorSecondNatural, minorSecondSharps } from "../__fixtures__/MinorSeconds";
-import { majorSecondFlats, majorSecondNatural, majorSecondSharps } from "../__fixtures__/MajorSeconds";
+} from "../__fixtures__/DiminishedSeconds.js";
+import { minorSecondFlats, minorSecondNatural, minorSecondSharps } from "../__fixtures__/MinorSeconds.js";
+import { majorSecondFlats, majorSecondNatural, majorSecondSharps } from "../__fixtures__/MajorSeconds.js";
 import {
   augmentedSecondFlats,
   augmentedSecondNatural,
   augmentedSecondSharps,
-} from "../__fixtures__/AugmentedSeconds";
-import { AugmentedSecond, MajorSecond, MinorSecond, DiminishedSecond } from "../../interval-builders/Second";
+} from "../__fixtures__/AugmentedSeconds.js";
+import {
+  AugmentedSecond,
+  MajorSecond,
+  MinorSecond,
+  DiminishedSecond,
+} from "../../interval-builders/Second.js";
 
 import { A2, AdoubleFlat2, G2, GFlat2 } from "../tests-helpers.js";
-import { Note } from "../types";
+import type { Note } from "../../types/index.js";
 
 describe("Second", () => {
   describe("Diminished", () => {

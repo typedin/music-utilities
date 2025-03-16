@@ -1,5 +1,5 @@
-import { AlterationEnum, DiatonicNoteEnum } from "../constants.js";
-import { IScaleDegree } from "../types";
+import { AlterationEnum, DiatonicNoteEnum } from "../../constants.js";
+import type { IScaleDegree } from "../../types/index.js";
 
 export const C_MINOR_HARMONIC_SCALE: IScaleDegree[] = [
   {

@@ -1,5 +1,5 @@
 import { AlterationEnum, DiatonicNoteEnum, ModeEnum } from "../../constants.js";
-import getRelativeKey from "../../keys";
+import getRelativeKey from "../../keys/index.js";
 
 describe("index", () => {
   describe("for major keys", () => {

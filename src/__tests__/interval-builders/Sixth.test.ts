@@ -1,4 +1,4 @@
-import { DiminishedSixth, MajorSixth, MinorSixth, AugmentedSixth } from "../../interval-builders/Sixth";
+import { DiminishedSixth, MajorSixth, MinorSixth, AugmentedSixth } from "../../interval-builders/Sixth.js";
 import {
   diminishedSixthFlats,
   diminishedSixthNatural,
@@ -12,7 +12,7 @@ import {
   augmentedSixthFlats,
   augmentedSixthNatural,
   augmentedSixthSharps,
-} from "../__fixtures__/Sixths";
+} from "../__fixtures__/Sixths.js";
 
 describe("Sixths", () => {
   describe("Diminished", () => {

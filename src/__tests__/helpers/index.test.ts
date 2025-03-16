@@ -1,5 +1,4 @@
-import * as helpers from "../../helpers.js";
-import { describe, expect, it, test } from "vitest";
+import * as helpers from "../../helpers/index.js";
 import * as testsHelpers from "../tests-helpers.js";
 import { AlterationEnum, DiatonicNoteEnum } from "../../constants.js";
 import { Eb4_MINOR_MELODIC_ASCENDING } from "../__fixtures__/Scales.js";

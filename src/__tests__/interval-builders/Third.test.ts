@@ -1,17 +1,16 @@
-import { DiminishedThird, MajorThird, MinorThird, AugmentedThird } from "../../interval-builders/Third";
+import { DiminishedThird, MajorThird, MinorThird, AugmentedThird } from "../../interval-builders/Third.js";
 import {
   augmentedThirdFlats,
   augmentedThirdNatural,
   augmentedThirdSharps,
-} from "../__fixtures__/AugmentedThirds";
-import { describe, it, expect } from "vitest";
+} from "../__fixtures__/AugmentedThirds.js";
 import {
   diminishedThirdFlats,
   diminishedThirdNatural,
   diminishedThirdSharps,
-} from "../__fixtures__/DiminishedThirds";
-import { majorThirdFlats, majorThirdNatural, majorThirdSharps } from "../__fixtures__/MajorThirds";
-import { minorThirdFlats, minorThirdNatural, minorThirdSharps } from "../__fixtures__/MinorThirds";
+} from "../__fixtures__/DiminishedThirds.js";
+import { majorThirdFlats, majorThirdNatural, majorThirdSharps } from "../__fixtures__/MajorThirds.js";
+import { minorThirdFlats, minorThirdNatural, minorThirdSharps } from "../__fixtures__/MinorThirds.js";
 import { AdoubleFlat2, C3 } from "../tests-helpers.js";
 
 describe("Thirds", () => {

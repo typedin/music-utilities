@@ -1,6 +1,5 @@
-import { describe, it, expect } from "vitest";
 import { AlterationEnum, DiatonicNoteEnum } from "../../constants.js";
-import { AugmentedOctave, DiminishedOctave, PerfectOctave } from "../../interval-builders/Octave";
+import { AugmentedOctave, DiminishedOctave, PerfectOctave } from "../../interval-builders/Octave.js";
 
 describe("Octave", () => {
   describe("Diminished", () => {

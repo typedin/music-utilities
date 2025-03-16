@@ -3,7 +3,7 @@ import {
   MajorSeventh,
   MinorSeventh,
   AugmentedSeventh,
-} from "../../interval-builders/Seventh";
+} from "../../interval-builders/Seventh.js";
 import { describe, it, expect } from "vitest";
 import {
   diminishedSeventhFlats,
@@ -18,7 +18,7 @@ import {
   augmentedSeventhFlats,
   augmentedSeventhNatural,
   augmentedSeventhSharps,
-} from "../__fixtures__/Sevenths";
+} from "../__fixtures__/Sevenths.js";
 
 describe("Sevenths", () => {
   describe("Diminished", () => {
