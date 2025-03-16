@@ -1,6 +1,6 @@
-import { IScaleDegree, Note } from "../types";
-import { AlterationEnum, DiatonicNoteEnum } from "../constants";
-import { isUnison } from "./isUnison";
+import { AlterationEnum, DiatonicNoteEnum } from "../constants.js";
+import type { IScaleDegree, Note } from "../types/index.js";
+import { isUnison } from "./isUnison.js";
 
 export function indexOfNote(note: Note): number {
   return Object.values(DiatonicNoteEnum).indexOf(note.name) % 12;
@@ -84,7 +84,7 @@ export function getNextNoteOnScale(scale: IScaleDegree[], note: Note) {
 export function getPreviousAlteration(needle: AlterationEnum): AlterationEnum {
   return (
     Object.values(AlterationEnum)[
-      Object.values(AlterationEnum).indexOf(needle) - 1
+    Object.values(AlterationEnum).indexOf(needle) - 1
     ] || AlterationEnum.natural
   );
 }

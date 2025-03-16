@@ -1,5 +1,5 @@
-import calculateFrequency from "../frequency-calculator";
-import { IReference, Note } from "../types";
+import calculateFrequency from "../frequency-calculator/index.js";
+import type { IReference, Note } from "../types/index.js";
 
 type interval = {
   direction: string;

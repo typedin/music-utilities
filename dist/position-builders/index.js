@@ -1,6 +1,6 @@
-import { getNextNoteOnScale } from "../helpers";
-import { beginOn } from "../scale-builders/beginOn";
-import { spanOver } from "../scale-builders/spanOver";
+import { getNextNoteOnScale } from "../helpers/index.js";
+import { beginOn } from "../scale-builders/beginOn.js";
+import { spanOver } from "../scale-builders/spanOver.js";
 export default function PositionBuilders(scale, musicalString, options) {
     const nextPossibleNoteWithStringOctave = {
         ...getNextNoteOnScale(scale, musicalString),

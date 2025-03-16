@@ -1,4 +1,4 @@
-import analyzeInterval from "../interval-analyzers/index";
+import analyzeInterval from "../interval-analyzers/index.js";
 export default function calculateFrequency(reference, note) {
     const interval = analyzeInterval(reference, note);
     if (!interval) {

@@ -1,6 +1,7 @@
-import { getAlterationForAugmentedInterval, getAlterationForDiminishedInterval, getAlterationForPerfectInterval, } from "./getAlterationForPerfectInterval";
-import { getName } from "./getName";
-import { getNoteOctave } from "./getNoteOctave";
+import { getAlterationForAugmentedInterval, getAlterationForDiminishedInterval } from "./getAlteration.js";
+import { getAlterationForPerfectInterval } from "./getAlterationForPerfectInterval.js";
+import { getName } from "./getName.js";
+import { getNoteOctave } from "./getNoteOctave.js";
 const specialCases = {
     up: [],
     down: [],

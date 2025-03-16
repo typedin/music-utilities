@@ -1,5 +1,5 @@
-import { DiatonicNoteEnum } from "../constants";
-import { getNextAlteration, getPreviousAlteration, indexOfNote } from ".";
+import { DiatonicNoteEnum } from "../constants.js";
+import { getNextAlteration, getPreviousAlteration, indexOfNote } from "./index.js";
 function areNotesTheSame(firstNote, secondNote) {
     return (firstNote.octave == secondNote.octave && firstNote.name == secondNote.name);
 }

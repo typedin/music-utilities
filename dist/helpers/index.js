@@ -1,5 +1,5 @@
-import { AlterationEnum, DiatonicNoteEnum } from "../constants";
-import { isUnison } from "./isUnison";
+import { AlterationEnum, DiatonicNoteEnum } from "../constants.js";
+import { isUnison } from "./isUnison.js";
 export function indexOfNote(note) {
     return Object.values(DiatonicNoteEnum).indexOf(note.name) % 12;
 }

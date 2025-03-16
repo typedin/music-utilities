@@ -1,4 +1,4 @@
-import { IScaleDegree, Note } from "../types";
+import type { IScaleDegree, Note } from "../types/index.js";
 
 export function getNoteOctave(
   note: Note,

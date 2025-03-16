@@ -1,5 +1,4 @@
-import { IScale } from "../types";
-import analyzeInterval from "../interval-analyzers/index";
+import type { IScale } from "../types/index.js";
 
 const all_scales = [
   {

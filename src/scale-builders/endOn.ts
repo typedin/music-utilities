@@ -1,5 +1,5 @@
-import { IScaleDegree, Note } from "../types";
-import { isInScale, isNoteHigher } from "../helpers";
+import { isInScale, isNoteHigher } from "../helpers/index.js";
+import type { IScaleDegree, Note } from "../types/index.js";
 
 export function endOn(
   scale: Array<IScaleDegree>,

@@ -1,13 +1,8 @@
-import { Note, Semitones } from "../types";
-import {
-  getAlterationForAugmentedInterval,
-  getAlterationForDiminishedInterval,
-  getAlterationForMajorInterval,
-  getAlterationForMinorInterval,
-} from "./getAlteration";
-import { getName } from "./getName";
-import { getNoteOctave } from "./getNoteOctave";
-import { DiatonicNoteEnum } from "../constants";
+import type { DiatonicNoteEnum } from "../constants.js";
+import type { Note, Semitones } from "../types/index.js";
+import { getAlterationForAugmentedInterval, getAlterationForDiminishedInterval, getAlterationForMajorInterval, getAlterationForMinorInterval } from "./getAlteration.js";
+import { getName } from "./getName.js";
+import { getNoteOctave } from "./getNoteOctave.js";
 
 const specialCases = {
   up: ["E", "B"] as Array<DiatonicNoteEnum>,

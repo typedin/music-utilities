@@ -1,4 +1,4 @@
-import { getNextAlteration, getPreviousAlteration } from "../helpers";
+import { getNextAlteration, getPreviousAlteration } from "../helpers/index.js";
 export function getAlterationForDiminishedInterval(note, direction, specialCases) {
     if (direction == "up") {
         return specialCases[direction].includes(note.name)

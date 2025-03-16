@@ -1,5 +1,5 @@
-import { frequencyAsPercentage } from "../frequency-ratio";
-import calculateFrequency from "../frequency-calculator";
+import calculateFrequency from "../frequency-calculator/index.js";
+import { frequencyAsPercentage } from "../frequency-ratio/index.js";
 export default function createNotePosition(scaleDegree, reference, musicalString, args) {
     return {
         ...scaleDegree,

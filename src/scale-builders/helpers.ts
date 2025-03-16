@@ -1,4 +1,4 @@
-import { IntervalBuilder, Note } from "../types";
+import type { IntervalBuilder, Note } from "../types/index.js";
 
 export type DegreeBuilder = {
   function: string;

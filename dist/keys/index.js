@@ -1,6 +1,6 @@
-import { ModeEnum } from "../constants";
-import { MajorSixth } from "../interval-builders/Sixth";
-import { MinorThird } from "../interval-builders/Third";
+import { ModeEnum } from "../constants.js";
+import { MajorSixth } from "../interval-builders/Sixth.js";
+import { MinorThird } from "../interval-builders/Third.js";
 export default function getRelativeKey(aTonality) {
     const { name, alteration } = aTonality.mode == ModeEnum.M
         ? MajorSixth({

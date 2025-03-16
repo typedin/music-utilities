@@ -1,5 +1,5 @@
-import { IScaleDegree, Note } from "../types";
-import { DiatonicNoteEnum } from "../constants";
+import { DiatonicNoteEnum } from "../constants.js";
+import type { IScaleDegree, Note } from "../types/index.js";
 
 export function beginOn(
   scale: IScaleDegree[],

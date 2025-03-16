@@ -1,6 +1,6 @@
-import { Note } from "../types";
-import type { AlterationEnum } from "../constants";
-import { getNextAlteration, getPreviousAlteration } from "../helpers";
+import type { AlterationEnum } from "../constants.js";
+import { getNextAlteration, getPreviousAlteration } from "../helpers/index.js";
+import type { Note } from "../types/index.js";
 
 function getAlterationForDiminishedInterval(
   note: Note,

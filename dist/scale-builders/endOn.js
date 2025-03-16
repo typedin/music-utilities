@@ -1,4 +1,4 @@
-import { isInScale, isNoteHigher } from "../helpers";
+import { isInScale, isNoteHigher } from "../helpers/index.js";
 export function endOn(scale, end) {
     const result = [];
     while (!isInScale(scale, end) && scale.length && end) {

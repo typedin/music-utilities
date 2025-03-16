@@ -1,31 +1,31 @@
-import { AugmentedFifth, DiminishedFifth, PerfectFifth } from "./Fifth";
-import { AugmentedFourth, DiminishedFourth, PerfectFourth } from "./Fourth";
-import { AugmentedOctave, DiminishedOctave, PerfectOctave } from "./Octave";
+import { AugmentedFifth, DiminishedFifth, PerfectFifth } from "./Fifth.js";
+import { AugmentedFourth, DiminishedFourth, PerfectFourth } from "./Fourth.js";
+import { AugmentedOctave, DiminishedOctave, PerfectOctave } from "./Octave.js";
 import {
   AugmentedSecond,
   DiminishedSecond,
   MajorSecond,
   MinorSecond,
-} from "./Second";
+} from "./Second.js";
 import {
   AugmentedSeventh,
   DiminishedSeventh,
   MajorSeventh,
   MinorSeventh,
-} from "./Seventh";
+} from "./Seventh.js";
 import {
   AugmentedSixth,
   DiminishedSixth,
   MajorSixth,
   MinorSixth,
-} from "./Sixth";
+} from "./Sixth.js";
 import {
   AugmentedThird,
   DiminishedThird,
   MajorThird,
   MinorThird,
-} from "./Third";
-import { AugmentedUnison, DiminishedUnison, PerfectUnison } from "./Unison";
+} from "./Third.js";
+import { AugmentedUnison, DiminishedUnison, PerfectUnison } from "./Unison.js";
 
 export default [
   // Unison

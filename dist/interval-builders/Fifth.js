@@ -1,6 +1,6 @@
-import { getName } from "./getName";
-import { getNoteOctave } from "./getNoteOctave";
-import { getNextAlteration, getPreviousAlteration } from "../helpers";
+import { getNextAlteration, getPreviousAlteration } from "../helpers/index.js";
+import { getName } from "./getName.js";
+import { getNoteOctave } from "./getNoteOctave.js";
 function getAlterationForDiminishedFifth(note, direction, specialCases) {
     if (direction == "up") {
         return specialCases[direction].includes(note.name)

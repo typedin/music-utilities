@@ -1,11 +1,6 @@
-import { frequencyAsPercentage } from "../frequency-ratio";
-import calculateFrequency from "../frequency-calculator";
-import {
-  IMusicalString,
-  INotePosition,
-  IReference,
-  IScaleDegree,
-} from "../types";
+import calculateFrequency from "../frequency-calculator/index.js";
+import { frequencyAsPercentage } from "../frequency-ratio/index.js";
+import type { IMusicalString, INotePosition, IReference, IScaleDegree } from "../types/index.js";
 
 export default function createNotePosition(
   scaleDegree: IScaleDegree,

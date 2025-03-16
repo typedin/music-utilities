@@ -1,4 +1,4 @@
-import { intervalTable } from "./interval-table";
+import { intervalTable } from "./interval-table.js";
 function createInterval(callback, direction, firstNote, secondNote) {
     const transposedNote = callback(firstNote, direction);
     return (transposedNote.name == secondNote.name &&

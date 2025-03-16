@@ -1,4 +1,4 @@
-import calculateFrequency from "../frequency-calculator";
+import calculateFrequency from "../frequency-calculator/index.js";
 export default function frequencyRatio(frequency, interval, temperament) {
     return temperament(frequency)[interval.name][interval.direction];
 }

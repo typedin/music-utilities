@@ -1,7 +1,7 @@
-import { IMusicalString, IScaleDegree, Note } from "../types";
-import { getNextNoteOnScale } from "../helpers";
-import { beginOn } from "../scale-builders/beginOn";
-import { spanOver } from "../scale-builders/spanOver";
+import { getNextNoteOnScale } from "../helpers/index.js";
+import { beginOn } from "../scale-builders/beginOn.js";
+import { spanOver } from "../scale-builders/spanOver.js";
+import type { IMusicalString, IScaleDegree, Note } from "../types/index.js";
 
 type BuilderOptions = {
   isRabbath?: boolean;

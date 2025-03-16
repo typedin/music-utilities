@@ -1,8 +1,8 @@
-import { getName } from "./getName";
-import { getNoteOctave } from "./getNoteOctave";
-import type { AlterationEnum, DiatonicNoteEnum } from "../constants";
-import { getNextAlteration, getPreviousAlteration } from "../helpers";
-import { Note, Semitones } from "../types";
+import type { AlterationEnum, DiatonicNoteEnum } from "../constants.js";
+import { getNextAlteration, getPreviousAlteration } from "../helpers/index.js";
+import type { Note, Semitones } from "../types/index.js";
+import { getName } from "./getName.js";
+import { getNoteOctave } from "./getNoteOctave.js";
 
 function getAlterationForDiminishedFifth(
   note: Note,

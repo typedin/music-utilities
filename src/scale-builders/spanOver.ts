@@ -1,4 +1,4 @@
-import { IScaleDegree } from "../types";
+import type { IScaleDegree } from "../types/index.js";
 
 export function spanOver(
   scale: IScaleDegree[],

@@ -1,5 +1,5 @@
-import { Interval, Note } from "../types";
-import { intervalTable, type IntervalTable } from "./interval-table";
+import type { Interval, Note } from "../types/index.js";
+import { intervalTable, type IntervalTable } from "./interval-table.js";
 
 type IntervalBuilder = (note: Note, direction: "up" | "down") => Note;
 

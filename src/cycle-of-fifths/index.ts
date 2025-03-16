@@ -1,8 +1,8 @@
-import { AlterationEnum, DiatonicNoteEnum } from "../constants";
-import { MinorThird } from "../interval-builders/Third";
-import { PerfectFifth } from "../interval-builders/Fifth";
+import { AlterationEnum, DiatonicNoteEnum } from "../constants.js";
+import { MinorThird } from "../interval-builders/Third.js";
+import { PerfectFifth } from "../interval-builders/Fifth.js";
 
-export default function ({
+export default function({
   name,
   alteration,
 }: {

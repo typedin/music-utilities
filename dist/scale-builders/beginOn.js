@@ -1,4 +1,4 @@
-import { DiatonicNoteEnum } from "../constants";
+import { DiatonicNoteEnum } from "../constants.js";
 export function beginOn(scale, startingNote) {
     const indexOfFirstDegree = scale.findIndex((degree) => degree.name == startingNote.name);
     const firstPart = scale.slice(indexOfFirstDegree, scale.length);

@@ -1,6 +1,6 @@
-import { AlterationEnum, DiatonicNoteEnum, ModeEnum } from "../constants";
-import { MajorSixth } from "../interval-builders/Sixth";
-import { MinorThird } from "../interval-builders/Third";
+import { ModeEnum, type AlterationEnum, type DiatonicNoteEnum } from "../constants.js";
+import { MajorSixth } from "../interval-builders/Sixth.js";
+import { MinorThird } from "../interval-builders/Third.js";
 
 type ITonality = {
   tonality: DiatonicNoteEnum;
@@ -12,15 +12,15 @@ export default function getRelativeKey(aTonality: ITonality): ITonality {
   const { name, alteration } =
     aTonality.mode == ModeEnum.M
       ? MajorSixth({
-          name: aTonality.tonality,
-          alteration: aTonality.alteration,
-          octave: 1,
-        })
+        name: aTonality.tonality,
+        alteration: aTonality.alteration,
+        octave: 1,
+      })
       : MinorThird({
-          name: aTonality.tonality,
-          alteration: aTonality.alteration,
-          octave: 1,
-        });
+        name: aTonality.tonality,
+        alteration: aTonality.alteration,
+        octave: 1,
+      });
 
   return {
     tonality: name,

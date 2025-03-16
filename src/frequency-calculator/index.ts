@@ -1,5 +1,5 @@
-import analyzeInterval from "../interval-analyzers/index";
-import { IReference, Note } from "../types";
+import analyzeInterval from "../interval-analyzers/index.js";
+import type { IReference, Note } from "../types/index.js";
 
 export default function calculateFrequency(
   reference: IReference,

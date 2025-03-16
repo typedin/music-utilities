@@ -11,6 +11,14 @@ export interface IReference extends Note {
   frequency: number;
 }
 
+export interface IScaleBuilder {
+  tonic: Note;
+  scaleSchema: any;
+  tonicRepetition: boolean;
+  withoutTonicRepetition: () => IScaleBuilder;
+  scale: () => IScale;
+}
+
 export interface INotePosition extends Note {
   degree: number;
   frequency: number;
@@ -50,11 +58,11 @@ export interface ReferenceUsedInStringStore extends Note {
 export interface Alteration {
   name: string;
   visual:
-    | AlterationEnum.flat
-    | AlterationEnum.sharp
-    | AlterationEnum.natural
-    | AlterationEnum.doubleFlat
-    | AlterationEnum.doubleSharp;
+  | AlterationEnum.flat
+  | AlterationEnum.sharp
+  | AlterationEnum.natural
+  | AlterationEnum.doubleFlat
+  | AlterationEnum.doubleSharp;
 }
 
 export type IntervalBuilder = (
