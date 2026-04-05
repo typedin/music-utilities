@@ -2,6 +2,7 @@
   "name": "@typedin/music-utilities",
   "version": "0.0.4",
   "scripts": {
+    "prepare": "npm run build",
     "build": "tsc",
     "test": "vitest run",
     "format": "prettier --write .",
