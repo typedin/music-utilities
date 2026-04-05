@@ -125,3 +125,69 @@ export function asNote(note: Note): Note {
     alteration: note.alteration,
   };
 }
+
+// Each pair shares the same pitch. Order within a pair is arbitrary.
+const ENHARMONIC_PAIRS: Array<[Note, Note]> = [
+  [
+    { name: DiatonicNoteEnum.C, alteration: AlterationEnum.sharp, octave: 0 },
+    { name: DiatonicNoteEnum.D, alteration: AlterationEnum.flat, octave: 0 },
+  ],
+  [
+    { name: DiatonicNoteEnum.D, alteration: AlterationEnum.sharp, octave: 0 },
+    { name: DiatonicNoteEnum.E, alteration: AlterationEnum.flat, octave: 0 },
+  ],
+  [
+    { name: DiatonicNoteEnum.E, alteration: AlterationEnum.natural, octave: 0 },
+    { name: DiatonicNoteEnum.F, alteration: AlterationEnum.flat, octave: 0 },
+  ],
+  [
+    { name: DiatonicNoteEnum.F, alteration: AlterationEnum.natural, octave: 0 },
+    { name: DiatonicNoteEnum.E, alteration: AlterationEnum.sharp, octave: 0 },
+  ],
+  [
+    { name: DiatonicNoteEnum.F, alteration: AlterationEnum.sharp, octave: 0 },
+    { name: DiatonicNoteEnum.G, alteration: AlterationEnum.flat, octave: 0 },
+  ],
+  [
+    { name: DiatonicNoteEnum.G, alteration: AlterationEnum.sharp, octave: 0 },
+    { name: DiatonicNoteEnum.A, alteration: AlterationEnum.flat, octave: 0 },
+  ],
+  [
+    { name: DiatonicNoteEnum.A, alteration: AlterationEnum.sharp, octave: 0 },
+    { name: DiatonicNoteEnum.B, alteration: AlterationEnum.flat, octave: 0 },
+  ],
+  [
+    { name: DiatonicNoteEnum.B, alteration: AlterationEnum.natural, octave: 0 },
+    { name: DiatonicNoteEnum.C, alteration: AlterationEnum.flat, octave: 0 },
+  ],
+  [
+    { name: DiatonicNoteEnum.B, alteration: AlterationEnum.sharp, octave: 0 },
+    { name: DiatonicNoteEnum.C, alteration: AlterationEnum.natural, octave: 0 },
+  ],
+];
+
+function sameNameAndAlteration(a: Note, b: Note): boolean {
+  return a.name === b.name && a.alteration === b.alteration;
+}
+
+/**
+ * Returns the enharmonic equivalent of the given note (same pitch, different spelling),
+ * preserving the original octave. Returns `undefined` if no enharmonic equivalent exists
+ * (e.g. D natural has no single enharmonic in standard notation).
+ */
+export function enharmonicEquivalent(note: Note): Note | undefined {
+  for (const [a, b] of ENHARMONIC_PAIRS) {
+    if (sameNameAndAlteration(note, a)) return { ...b, octave: note.octave };
+    if (sameNameAndAlteration(note, b)) return { ...a, octave: note.octave };
+  }
+  return undefined;
+}
+
+/**
+ * Returns true if two notes are enharmonically equivalent (same pitch, possibly different spelling).
+ */
+export function areEnharmonicEquivalents(a: Note, b: Note): boolean {
+  if (sameNameAndAlteration(a, b)) return true;
+  const equiv = enharmonicEquivalent(a);
+  return equiv !== undefined && sameNameAndAlteration(equiv, b);
+}

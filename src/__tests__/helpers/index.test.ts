@@ -166,6 +166,46 @@ describe("buildNoteName", () => {
   });
 });
 
+describe("enharmonicEquivalent", () => {
+  it("returns D♭ for C♯", () => {
+    expect(helpers.enharmonicEquivalent(testsHelpers.Csharp4)).toEqual(testsHelpers.Db4);
+  });
+
+  it("returns C♯ for D♭", () => {
+    expect(helpers.enharmonicEquivalent(testsHelpers.Db4)).toEqual(testsHelpers.Csharp4);
+  });
+
+  it("preserves the octave", () => {
+    expect(helpers.enharmonicEquivalent(testsHelpers.Csharp5)).toEqual({
+      name: DiatonicNoteEnum.D,
+      alteration: AlterationEnum.flat,
+      octave: 5,
+    });
+  });
+
+  it("returns undefined for a note with no enharmonic equivalent", () => {
+    expect(helpers.enharmonicEquivalent(testsHelpers.D4)).toBeUndefined();
+  });
+});
+
+describe("areEnharmonicEquivalents", () => {
+  it("returns true for C♯ and D♭", () => {
+    expect(helpers.areEnharmonicEquivalents(testsHelpers.Csharp4, testsHelpers.Db4)).toBe(true);
+  });
+
+  it("returns true for D♭ and C♯", () => {
+    expect(helpers.areEnharmonicEquivalents(testsHelpers.Db4, testsHelpers.Csharp4)).toBe(true);
+  });
+
+  it("returns true for identical notes", () => {
+    expect(helpers.areEnharmonicEquivalents(testsHelpers.C4, testsHelpers.C4)).toBe(true);
+  });
+
+  it("returns false for notes that are not enharmonic", () => {
+    expect(helpers.areEnharmonicEquivalents(testsHelpers.C4, testsHelpers.D4)).toBe(false);
+  });
+});
+
 describe("getFirstPossibleNoteInScale", () => {
   it("gets E flat 4 for E flat 1 on Eb scale", () => {
     const scale = Eb4_MINOR_MELODIC_ASCENDING;

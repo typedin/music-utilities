@@ -164,6 +164,42 @@ describe("index", () => {
     });
   });
 
+  it("exposes rootIndex pointing to the requested note", () => {
+    const cycle = cycleOfFifths({
+      name: DiatonicNoteEnum.C,
+      alteration: AlterationEnum.natural,
+    });
+
+    expect(cycle.rootIndex).toEqual(5);
+    expect(cycle.getSequence().at(cycle.rootIndex)).toEqual({
+      major: { name: DiatonicNoteEnum.C, alteration: AlterationEnum.natural, octave: 4 },
+      minor: { name: DiatonicNoteEnum.A, alteration: AlterationEnum.natural, octave: 4 },
+    });
+  });
+
+  it("getSequenceFromRoot starts at the requested note", () => {
+    const cycle = cycleOfFifths({
+      name: DiatonicNoteEnum.C,
+      alteration: AlterationEnum.natural,
+    });
+
+    const fromRoot = cycle.getSequenceFromRoot();
+
+    expect(fromRoot.length).toEqual(12);
+    expect(fromRoot.at(0)).toEqual({
+      major: { name: DiatonicNoteEnum.C, alteration: AlterationEnum.natural, octave: 4 },
+      minor: { name: DiatonicNoteEnum.A, alteration: AlterationEnum.natural, octave: 4 },
+    });
+    expect(fromRoot.at(1)).toEqual({
+      major: { name: DiatonicNoteEnum.G, alteration: AlterationEnum.natural, octave: 4 },
+      minor: { name: DiatonicNoteEnum.E, alteration: AlterationEnum.natural, octave: 4 },
+    });
+    expect(fromRoot.at(11)).toEqual({
+      major: { name: DiatonicNoteEnum.F, alteration: AlterationEnum.natural, octave: 4 },
+      minor: { name: DiatonicNoteEnum.D, alteration: AlterationEnum.natural, octave: 4 },
+    });
+  });
+
   it("gets next or previous key in any direction", () => {
     const cycle = cycleOfFifths({
       name: DiatonicNoteEnum.C,
